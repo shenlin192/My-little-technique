@@ -7,6 +7,10 @@
 放在暂存区（add）的文件修改容易，放在仓库（commit）里的文件修改困难。
 
 只有在有 .git 隐藏文件的地方才有能运行git 命令
+
+$ git clone git@github.com:shenlin192/git_instruction.git
+fatal: destination path 'git_instruction' already exists and is not an empty directory.
+
 /******************part 1**********************/
 /**********************************************/
 local repository 本地仓库 保存在.git object中
