@@ -1,0 +1,104 @@
+0
+本地仓库由 git 维护的三棵“树”组成。
+第一个是你的 工作区（working area），它持有实际文件；
+第二个是 暂存区（Index），它像个缓存区域，临时保存你的改动；在.git index 文件中
+最后是 HEAD，它指向最后一次提交的结果。
+
+/******************part 1**********************/
+/**********************************************/
+local repository 本地仓库 保存在.git object中
+自己跟自己玩 不安全
+/**********************************************/
+/**********************************************/
+
+1 开始工作前 git init 初始化一个空的git仓库
+此时生成 .git 隐藏文件夹，用于存放版本数据。
+
+2 改变用户信息 git config
+git config --global user.name "SHENLIN"
+git config --global user.email shenlin192@gmail.com
+git config -l （查看config的状态）
+
+3 git add 用于将工作区新文件放入 index(staging area)缓存区里
+  git add *.html 所有的html文件
+  git add . 所有文件
+
+4 git commit -m 将缓存区文件放入仓库
+  
+  若文件放入缓存区后再被修改了，则用 
+  git commit -am 直接将其放入仓库
+  相当于 git add <filename> + git commit -m
+  用新修改的文件状态覆盖缓存区中的文件状态+放入仓库
+
+本质上 git 保存不同版本文件的快照
+一个commit就有一个版本，一个版本里面有一个指针，指向 一个blob 表 
+（blob表里面有指向项目中各个文件的指针）
+header 指针指向当前版本
+
+6 git branch <branch_name> 增加分支
+  git branch 查看分支
+  git checkout <branch_name> 切换分支
+
+  分支本质上是指向不同commit版本的指针
+
+7 git log （用于查看当前分支的不同版本号）
+	提交的版本号
+	作者 邮件
+	日期
+		注释
+
+10 git pull = "git fetch" + "git merge"
+抓取远程服务器数据+合并本地数据 可能出现
+
+/******************part 2**********************/
+/**********************************************/
+Remote repository 远程仓库
+安全 可以多人开发
+/**********************************************/
+/**********************************************/
+
+git 服务器支持 SSH HTTP GIT协议
+
+SSH GIT协议都是智能协议（可以看到传输进度与速度）
+HTTP 智能协议或哑协议都行
+
+1使用SSH公钥和私钥
+
+ a
+ 首先我们要用SSH 命令生成公钥和私钥
+ ssh-keygen -t rsa -C "自己配置的邮箱"
+ /**** ssh-keygen -t rsa -C "shenlin192@gmail.com" ****/
+ 然后设置生成的公钥与私钥的存储路径
+ bug： 要先有 rsa 文件才可以在git bash中对其重写
+ 如果觉得麻烦就直接保存在默认路径中“/c/Users/shenlin/.ssh/id_rsa ”
+
+ b
+ 然后登陆github 
+ 在头像旁边可以有个按钮可以选择setting->SSH keys-> New SSH key
+ 将步骤a 中得到的公钥用文本编辑器打开，在复制粘贴到github上
+ 最后用命令：ssh git@github.com 测试这个公钥是否能用
+ /*******此时就可以用shenlin192这个用户名跟github交互了*******/
+
+2 克隆项目后，本地操作，再推送上去
+
+ a
+ git clone <项目地址> 
+ 此时就会把远程项目复制到本机（同时也把.git文件配置好了）
+ 若是打开.git 中的 .config 文件则会看到远程分支"origin"
+ 及其地址url。同时本地“master”跟远程的“origin”自动关联起来了
+
+[remote "origin"]
+	url = https://github.com/Valars/Hyblab2016.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+ b 
+ 在本机对项目文件修改完成后，使用 git add 和 git commit 命令
+ 将修改好的文件保存在本机仓库中。然后再用以下命令push到远程服务器
+   git push -u [remote branch] [local branch]
+   git push -u origin master
+ 若是简写 git push 那么就会执行默认参数，
+ 远程分支就是.config中remote的内容
+ 本地分支就是当前工作分支
