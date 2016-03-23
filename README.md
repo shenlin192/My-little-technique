@@ -2,11 +2,11 @@
 
 * [Git 基本知识](#1)
 
-* [1.1图片](#jump)
+* [git本地仓库控制](#2)
 
-* [1.2换行](#1.2)
+* [git本地仓库控制](#3)
 
-* [1.3强调](#1.3)
+
 
 <h2 id="1">Git 基本知识</h2>
  
@@ -21,9 +21,8 @@ git的本地仓库由的三个区组成:
 
 只有在有 .git 隐藏文件的地方才有能运行git 命令
 
-## git本地仓库控制
+<h2 id="2"> git本地仓库控制</h2>
 
-<span id="jump">Hello World</span>
 
 local repository 本地仓库 保存在.git object中
 自己跟自己玩 不安全
@@ -71,7 +70,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 		
 ![](https://github.com/shenlin192/git_instruction/blob/master/git_log.PNG)
 
-## git远程仓库版本控制
+<h2 id="3"> git远程仓库版本控制</h2>
 
 git 服务器支持 SSH HTTP GIT协议
 
