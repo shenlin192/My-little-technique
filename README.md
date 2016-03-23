@@ -28,9 +28,9 @@ local repository 本地仓库 保存在.git object中
 
 自己跟自己玩 不安全
 
-1 开始工作前 git init 初始化一个空的git仓库。
-此时生成 .git 隐藏文件夹，用于存放版本数据。
-只有在有 .git 隐藏文件的地方才有能运行git 命令
+1 开始工作前 git init 初始化一个空的git仓库。  
+此时生成 .git 隐藏文件夹，用于存放版本数据。  
+只有在有 .git 隐藏文件的地方才有能运行git 命令  
 不然会有以下错误:
 
 `$ git clone git@github.com:shenlin192/git_instruction.git
@@ -42,20 +42,20 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
   - git config -l （查看config的状态）
 
 3 git add 用于将工作区新文件放入 index(staging area)缓存区里
-  - git add *.html 所有的html文件
-  - git add . 所有文件
+  - git add *.html 所有的html文件  
+  - git add . 所有文件  
   
 4 git commit -m 将缓存区文件放入仓库
   
-  若文件放入缓存区后再被修改了，则用 
-  git commit -am 直接将其放入仓库
-  相当于 git add <filename> + git commit -m
-  用新修改的文件状态覆盖缓存区中的文件状态+放入仓库
+  若文件放入缓存区后再被修改了，则用   
+  git commit -am 直接将其放入仓库  
+  相当于 git add <filename> + git commit -m  
+  用新修改的文件状态覆盖缓存区中的文件状态+放入仓库  
   
-  本质上 git 保存不同版本文件的快照
+  本质上 git 保存不同版本文件的快照  
   一个commit就有一个版本，一个版本里面有一个指针，指向 一个blob（二进制大对象） 表 
-  （blob表里面有指向项目中各个文件的指针）
-  header 指针指向当前版本
+  （blob表里面有指向项目中各个文件的指针）  
+  header 指针指向当前版本  
 
 5 分支
   - git branch /<branch_name> 增加分支
@@ -63,7 +63,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
   - git checkout branch_name 切换分支
 分支本质上是指向不同commit版本的指针
 
-6 git log （用于查看当前分支的不同版本号）
+6 git log （用于查看当前分支的不同版本号）  
 	提交的版本号  
 	作者 邮件  
 	日期  
@@ -87,7 +87,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 
 git 服务器支持 SSH HTTP GIT协议
 
-SSH GIT协议都是智能协议（可以看到传输进度与速度）
+SSH GIT协议都是智能协议（可以看到传输进度与速度）  
 HTTP 智能协议或哑协议都行
 
 <h3 id="3.1">使用SSH公钥和私钥</h3>
@@ -98,23 +98,23 @@ HTTP 智能协议或哑协议都行
  
  /**** ssh-keygen -t rsa -C "shenlin192@gmail.com" ****/
  
- 然后设置生成的公钥与私钥的存储路径
- 
- bug： 要先有 rsa 文件才可以在git bash中对其重写
- 如果觉得麻烦就直接保存在默认路径中“/c/Users/shenlin/.ssh/id_rsa ”
+ 然后设置生成的公钥与私钥的存储路径  
+   
+ bug： 要先有 rsa 文件才可以在git bash中对其重写  
+ 如果觉得麻烦就直接保存在默认路径中“/c/Users/shenlin/.ssh/id_rsa ”  
 
  2然后登陆github 
- 在头像旁边可以有个按钮可以选择setting->SSH keys-> New SSH key
- 将步骤a 中得到的公钥用文本编辑器打开，再复制粘贴到github上
+ 在头像旁边可以有个按钮可以选择setting->SSH keys-> New SSH key  
+ 将步骤a 中得到的公钥用文本编辑器打开，再复制粘贴到github上  
  最后用命令：
  `ssh git@github.com `
  测试这个公钥是否能用
 
  /\*\*\*\*\*此时就可以用shenlin192这个用户名跟github交互了\*\*\*\*\*/
  
- 使用SSH的好处是每次push都不需要输入用户名和密码
- 在用户设置中设置SSH，拥有私钥的人可以对用户所有仓库进行修改
- 在项目中设置SSH，拥有私钥的人可以对仓库进行修改 
+ 使用SSH的好处是每次push都不需要输入用户名和密码  
+ 在用户设置中设置SSH，拥有私钥的人可以对用户所有仓库进行修改  
+ 在项目中设置SSH，拥有私钥的人可以对仓库进行修改   
 
 
 <h3 id="3.2">克隆项目后，本地操作，再推送上去</h3>
@@ -124,19 +124,14 @@ HTTP 智能协议或哑协议都行
  若是打开.git 中的 .config 文件则会看到远程分支"origin"
  及其地址url。同时本地“master”跟远程的“origin”自动关联起来了
  
-`
-[remote "origin"]
 
-	url = https://github.com/Valars/Hyblab2016.git
-	
-	fetch = +refs/heads/*:refs/remotes/origin/*
-	
-[branch "master"]
+[remote "origin"]  
+	url = https://github.com/Valars/Hyblab2016.git  
+	fetch = +refs/heads/*:refs/remotes/origin/*  
+[branch "master"]  
+	remote = origin  
+	merge = refs/heads/master  
 
-	remote = origin
-	
-	merge = refs/heads/master
-`
 
  /\*\*实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可\*\*/
 
