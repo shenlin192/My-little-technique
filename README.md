@@ -113,7 +113,6 @@ HTTP 智能协议或哑协议都行
  若是打开.git 中的 .config 文件则会看到远程分支"origin"
  及其地址url。同时本地“master”跟远程的“origin”自动关联起来了
  
- <h2 id="1">1.语法示例</h2>
 `
 [remote "origin"]
 
@@ -128,7 +127,7 @@ HTTP 智能协议或哑协议都行
 	merge = refs/heads/master
 `
 
- **实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可**
+ /\*\*实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可\*\*/
 
  2 
  在本机对项目文件修改完成后，使用 git add 和 git commit 命令
