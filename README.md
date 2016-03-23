@@ -25,6 +25,7 @@ git的本地仓库由的三个区组成:
 <h2 id="2"> git本地仓库控制</h2>
 
 local repository 本地仓库 保存在.git object中
+
 自己跟自己玩 不安全
 
 1 开始工作前 git init 初始化一个空的git仓库。
@@ -80,7 +81,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 
 * [多人协作使用git](#3.3)
 
-	* [hi](#3.4)
+* [杂项](#3.4)
 
 
 
