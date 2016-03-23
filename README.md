@@ -18,9 +18,10 @@ local repository 本地仓库 保存在.git object中
 1. 开始工作前 git init 初始化一个空的git仓库。
 此时生成 .git 隐藏文件夹，用于存放版本数据。
 只有在有 .git 隐藏文件的地方才有能运行git 命令
+不然会有以下错误
 
-'$ git clone git@github.com:shenlin192/git_instruction.git
-fatal: destination path 'git_instruction' already exists and is not an empty directory.'
+`$ git clone git@github.com:shenlin192/git_instruction.git
+fatal: destination path 'git_instruction' already exists and is not an empty directory.`
 
 2.  改变用户信息 git config
 git config --global user.name "SHENLIN"
