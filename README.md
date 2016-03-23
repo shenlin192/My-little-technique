@@ -67,7 +67,7 @@ HTTP 智能协议或哑协议都行
 
 ### 使用SSH公钥和私钥
 
- a
+ 1
  首先我们要用SSH 命令生成公钥和私钥
  
  `ssh-keygen -t rsa -C "自己配置的邮箱"`
@@ -79,11 +79,13 @@ HTTP 智能协议或哑协议都行
  bug： 要先有 rsa 文件才可以在git bash中对其重写
  如果觉得麻烦就直接保存在默认路径中“/c/Users/shenlin/.ssh/id_rsa ”
 
- b
+ 2
  然后登陆github 
  在头像旁边可以有个按钮可以选择setting->SSH keys-> New SSH key
  将步骤a 中得到的公钥用文本编辑器打开，再复制粘贴到github上
- 最后用命令：ssh git@github.com 测试这个公钥是否能用
+ 最后用命令：
+ `ssh git@github.com `
+ 测试这个公钥是否能用
 
  /*******此时就可以用shenlin192这个用户名跟github交互了*******/
  
@@ -93,7 +95,7 @@ HTTP 智能协议或哑协议都行
 
 ### 克隆项目后，本地操作，再推送上去
 
- a
+ 1
  git clone <项目地址> 
  此时就会把远程项目复制到本机（同时也把.git文件配置好了）
  若是打开.git 中的 .config 文件则会看到远程分支"origin"
@@ -115,7 +117,7 @@ HTTP 智能协议或哑协议都行
 
  **实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可**
 
- b 
+ 2 
  在本机对项目文件修改完成后，使用 git add 和 git commit 命令
  将修改好的文件保存在本机仓库中。然后再用以下命令push到远程服务器
    
