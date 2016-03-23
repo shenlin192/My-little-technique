@@ -65,15 +65,14 @@ git 服务器支持 SSH HTTP GIT协议
 SSH GIT协议都是智能协议（可以看到传输进度与速度）
 HTTP 智能协议或哑协议都行
 
-1 使用SSH公钥和私钥
+### 使用SSH公钥和私钥
 
  a
  首先我们要用SSH 命令生成公钥和私钥
  
- `
- ssh-keygen -t rsa -C "自己配置的邮箱"
+ `ssh-keygen -t rsa -C "自己配置的邮箱"`
+ 
  /**** ssh-keygen -t rsa -C "shenlin192@gmail.com" ****/
- `
  
  然后设置生成的公钥与私钥的存储路径
  
@@ -81,7 +80,6 @@ HTTP 智能协议或哑协议都行
  如果觉得麻烦就直接保存在默认路径中“/c/Users/shenlin/.ssh/id_rsa ”
 
  b
- 
  然后登陆github 
  在头像旁边可以有个按钮可以选择setting->SSH keys-> New SSH key
  将步骤a 中得到的公钥用文本编辑器打开，再复制粘贴到github上
@@ -93,10 +91,9 @@ HTTP 智能协议或哑协议都行
  在用户设置中设置SSH，拥有私钥的人可以对用户所有仓库进行修改
  在项目中设置SSH，拥有私钥的人可以对仓库进行修改 
 
-2 克隆项目后，本地操作，再推送上去
+### 克隆项目后，本地操作，再推送上去
 
  a
- 
  git clone <项目地址> 
  此时就会把远程项目复制到本机（同时也把.git文件配置好了）
  若是打开.git 中的 .config 文件则会看到远程分支"origin"
@@ -104,28 +101,34 @@ HTTP 智能协议或哑协议都行
  
 `
 [remote "origin"]
+
 	url = https://github.com/Valars/Hyblab2016.git
+	
 	fetch = +refs/heads/*:refs/remotes/origin/*
+	
 [branch "master"]
+
 	remote = origin
+	
 	merge = refs/heads/master
 `
 
- 实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可
+ **实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可**
 
  b 
- 
  在本机对项目文件修改完成后，使用 git add 和 git commit 命令
  将修改好的文件保存在本机仓库中。然后再用以下命令push到远程服务器
-   git push -u [remote branch] [local branch]
-   git push -u origin master
+   
+   `git push -u [remote branch] [local branch]`
+   
+   `git push -u origin master`
+   
  若是简写 git push 那么就会执行默认参数，
  远程分支就是.config中remote的内容
  本地分支就是当前工作分支
 
- 3 
  
- 多人协作使用git
+ ### 多人协作使用git
  
  在github的仓库选择->setting->collaborators 就可以邀请协作者了
  
@@ -138,5 +141,5 @@ HTTP 智能协议或哑协议都行
  若合并不成功，则需要人工解决进行合并，人工合并完才能push。
  这就相当于 git 强制要求你阅读远程仓库的变化。
 
-4 杂项
+### 杂项
  git branch -vv 查看本地分支和远程分支的关系
