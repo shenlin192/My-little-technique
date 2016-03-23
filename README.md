@@ -60,3 +60,72 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 
 ## git远程仓库版本控制
 
+git 服务器支持 SSH HTTP GIT协议
+
+SSH GIT协议都是智能协议（可以看到传输进度与速度）
+HTTP 智能协议或哑协议都行
+
+1 使用SSH公钥和私钥
+
+ a
+ 首先我们要用SSH 命令生成公钥和私钥
+ `
+ ssh-keygen -t rsa -C "自己配置的邮箱"
+ /**** ssh-keygen -t rsa -C "shenlin192@gmail.com" ****/
+ `
+ 然后设置生成的公钥与私钥的存储路径
+ bug： 要先有 rsa 文件才可以在git bash中对其重写
+ 如果觉得麻烦就直接保存在默认路径中“/c/Users/shenlin/.ssh/id_rsa ”
+
+ b
+ 然后登陆github 
+ 在头像旁边可以有个按钮可以选择setting->SSH keys-> New SSH key
+ 将步骤a 中得到的公钥用文本编辑器打开，再复制粘贴到github上
+ 最后用命令：ssh git@github.com 测试这个公钥是否能用
+
+ /*******此时就可以用shenlin192这个用户名跟github交互了*******/
+ 
+ 使用SSH的好处是每次push都不需要输入用户名和密码
+ 在用户设置中设置SSH，拥有私钥的人可以对用户所有仓库进行修改
+ 在项目中设置SSH，拥有私钥的人可以对仓库进行修改 
+
+2 克隆项目后，本地操作，再推送上去
+
+ a
+ git clone <项目地址> 
+ 此时就会把远程项目复制到本机（同时也把.git文件配置好了）
+ 若是打开.git 中的 .config 文件则会看到远程分支"origin"
+ 及其地址url。同时本地“master”跟远程的“origin”自动关联起来了
+`
+[remote "origin"]
+	url = https://github.com/Valars/Hyblab2016.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+`
+ 实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可
+
+ b 
+ 在本机对项目文件修改完成后，使用 git add 和 git commit 命令
+ 将修改好的文件保存在本机仓库中。然后再用以下命令push到远程服务器
+   git push -u [remote branch] [local branch]
+   git push -u origin master
+ 若是简写 git push 那么就会执行默认参数，
+ 远程分支就是.config中remote的内容
+ 本地分支就是当前工作分支
+
+ 3 多人协作使用git
+ 在github的仓库选择->setting->collaborators 就可以邀请协作者了
+ 
+
+ -git fetch <remote repository> 将远程服务器的信息抓取到本地仓库中但不影响工作区 
+ -git merge 远程仓库名/分支名      将远程仓库分支合并到工作区
+ -git pull= git fetch+git merge 
+ 
+ 若合并成功（没出现本地和远程仓库都对同一文件同一地方进行修改），则可以puch
+ 若合并不成功，则需要人工解决进行合并，人工合并完才能push
+ 这就相当于 git 强制要求你阅读远程仓库的变化。
+
+4 杂项
+ git branch -vv 查看本地分支和远程分支的关系
