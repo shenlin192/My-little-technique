@@ -74,11 +74,13 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 
 <h2 id="3"> git远程仓库版本控制</h2>
 
-* [Git 基本知识](#3.1)
+* [使用SSH公钥和私钥](#3.1)
 
-* [git本地仓库控制](#3.2)
+* [克隆项目后，本地操作，再推送上去](#3.2)
 
-* [git本地仓库控制](#3.3)
+* [多人协作使用git](#3.3)
+
+	* [hi](#3.4)
 
 
 
