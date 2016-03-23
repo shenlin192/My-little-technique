@@ -23,12 +23,12 @@ local repository 本地仓库 保存在.git object中
 `$ git clone git@github.com:shenlin192/git_instruction.git
 fatal: destination path 'git_instruction' already exists and is not an empty directory.`
 
-2 改变用户信息 git config
+2. 改变用户信息 git config
   - git config --global user.name "SHENLIN"
   - git config --global user.email shenlin192@gmail.com
   - git config -l （查看config的状态）
 
-3 git add 用于将工作区新文件放入 index(staging area)缓存区里
+3. git add 用于将工作区新文件放入 index(staging area)缓存区里
   - git add *.html 所有的html文件
   - git add . 所有文件
 
