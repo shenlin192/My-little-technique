@@ -56,7 +56,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 	日期
 		注释
 		
-
+![](https://github.com/shenlin192/git_instruction/blob/master/git_log.PNG)
 
 ## git远程仓库版本控制
 
