@@ -2,7 +2,7 @@
 ## Git 基本知识
 git是一种版本控制工具，能控制本地仓库和远程仓库。
 
-git的本地仓库由的三个区组成。
+git的本地仓库由的三个区组成:
 
 1. **工作区**（working area），它持有实际文件；
 2. **暂存区**（Index），它像个缓存区域，临时保存你的改动；（在.git index 文件中)
@@ -18,11 +18,9 @@ local repository 本地仓库 保存在.git object中
 1. 开始工作前 git init 初始化一个空的git仓库。
 此时生成 .git 隐藏文件夹，用于存放版本数据。
 只有在有 .git 隐藏文件的地方才有能运行git 命令
-不然会有以下错误
-
+不然会有以下错误:
 `$ git clone git@github.com:shenlin192/git_instruction.git
 fatal: destination path 'git_instruction' already exists and is not an empty directory.`
-
 2. 改变用户信息 git config
   - git config --global user.name "SHENLIN"
   - git config --global user.email shenlin192@gmail.com
