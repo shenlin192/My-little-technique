@@ -1,8 +1,10 @@
 # Git 学习笔记
-1. * [Git 基本知识](#id1)
-2. * [git本地仓库控制](#id2)
+
+1.* [Git 基本知识](#1)
+2.* [git本地仓库控制](#2)
+
 ## Git 基本知识
- <span id="1">Hello World</span>
+ 
 git是一种版本控制工具，能控制本地仓库和远程仓库。
 
 git的本地仓库由的三个区组成:
@@ -15,6 +17,7 @@ git的本地仓库由的三个区组成:
 只有在有 .git 隐藏文件的地方才有能运行git 命令
 
 ## git本地仓库控制
+<span id="1">Hello World</span>
 local repository 本地仓库 保存在.git object中
 自己跟自己玩 不安全
 
