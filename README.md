@@ -2,7 +2,7 @@
 
 * [Git 基本知识](#1)
 
-* [1.1图片](#3)
+* [1.1图片](#jump)
 
 * [1.2换行](#1.2)
 
@@ -23,7 +23,7 @@ git的本地仓库由的三个区组成:
 
 ## git本地仓库控制
 
-<span id="3">Hello World</span>
+<span id="jump">Hello World</span>
 
 local repository 本地仓库 保存在.git object中
 自己跟自己玩 不安全
