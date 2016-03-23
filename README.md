@@ -44,8 +44,8 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
   （blob表里面有指向项目中各个文件的指针）
   header 指针指向当前版本
 
-5 
-  - git branch branch_name 增加分支
+5 分支
+  - git branch /<branch_name> 增加分支
   - git branch 查看分支
   - git checkout branch_name 切换分支
 分支本质上是指向不同commit版本的指针
