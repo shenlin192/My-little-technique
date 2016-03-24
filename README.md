@@ -64,9 +64,9 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 分支本质上是指向不同commit版本的指针
 
 6 git log （用于查看当前分支的不同版本号）  
-&emsp;&emsp;提交的版本号  
-&emsp;&emsp;作者 邮件 
-&emsp;&emsp;日期  
+提交的版本号    
+作者 邮件    
+日期  
 &emsp;&emsp;&emsp;&emsp;注释
 		
 ![](https://github.com/shenlin192/git_instruction/blob/master/git_log.PNG)
