@@ -75,7 +75,10 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 
 <h2 id="3"> git远程仓库版本控制</h2>
 
+
 * [使用SSH公钥和私钥](#3.1)
+
+* [star watch fork](#3.1+)
 
 * [克隆项目后，本地操作，再推送上去](#3.2)
 
@@ -115,6 +118,16 @@ HTTP 智能协议或哑协议都行
  使用SSH的好处是每次push都不需要输入用户名和密码  
  在用户设置中设置SSH，拥有私钥的人可以对用户所有仓库进行修改  
  在项目中设置SSH，拥有私钥的人可以对仓库进行修改   
+
+<h3 id="3.1+">star watch frok</h3>
+
+fork : 创建源项目代码库的分支，并拷贝到自己的账号中  
+
+star: 关注别人项目更新  
+
+watch: 设置接收邮件提醒，邮件提醒包括Issues and their comments、Pull Requests and their comments、Comments on any commits   
+
+star和watch的区别在于前者不会把项目的动态展示在你的dashboard 里，仅作为收藏功能  
 
 
 <h3 id="3.2">克隆项目后，本地操作，再推送上去</h3>
