@@ -64,10 +64,10 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 分支本质上是指向不同commit版本的指针
 
 6 git log （用于查看当前分支的不同版本号）  
-&nbsp;提交的版本号  
-&nbsp;	作者 邮件  
-&nbsp;	日期  
-&emsp;&emsp;		注释
+&emsp;&emsp;提交的版本号  
+&emsp;&emsp;作者 邮件 
+&emsp;&emsp;日期  
+&emsp;&emsp;&emsp;&emsp;注释
 		
 ![](https://github.com/shenlin192/git_instruction/blob/master/git_log.PNG)
 
@@ -139,11 +139,11 @@ star和watch的区别在于前者不会把项目的动态展示在你的dashboar
  
 
 [remote "origin"]  
-	url = https://github.com/Valars/Hyblab2016.git  
-	fetch = +refs/heads/*:refs/remotes/origin/*  
+&emsp;&emsp;&emsp;&emsp;	url = https://github.com/Valars/Hyblab2016.git  
+&emsp;&emsp;&emsp;&emsp;	fetch = +refs/heads/*:refs/remotes/origin/*  
 [branch "master"]  
-	remote = origin  
-	merge = refs/heads/master  
+&emsp;&emsp;&emsp;&emsp;	remote = origin  
+&emsp;&emsp;&emsp;&emsp;	merge = refs/heads/master  
 
 
  /\*\*实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可\*\*/
