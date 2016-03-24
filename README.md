@@ -67,7 +67,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 &nbsp;提交的版本号  
 &nbsp;	作者 邮件  
 &nbsp;	日期  
-&nbsp;&nbsp;		注释
+&emsp;&emsp;		注释
 		
 ![](https://github.com/shenlin192/git_instruction/blob/master/git_log.PNG)
 
