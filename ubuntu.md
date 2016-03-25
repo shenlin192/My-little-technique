@@ -4,3 +4,6 @@
 `sudo bash`    
 `echo "options rtl8723be fwlps=0 swlps=0" > /etc/modprobe.d/rtl8723be.conf `   
 `reboot`   
+
+##彻底删除 ocaml
+` sudo apt-get remove  ocaml-base-nox`
