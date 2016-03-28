@@ -97,7 +97,7 @@ HTTP 智能协议或哑协议都行
 
 <h3 id="3.1">使用SSH公钥和私钥</h3>
 
- 1首先我们要用SSH 命令生成公钥和私钥
+ 1&emsp;首先我们要用SSH 命令生成公钥和私钥
  
  `ssh-keygen -t rsa -C "自己配置的邮箱"`
  
@@ -108,13 +108,15 @@ HTTP 智能协议或哑协议都行
  bug： 要先有 rsa 文件才可以在git bash中对其重写  
  如果觉得麻烦就直接保存在默认路径中“/c/Users/shenlin/.ssh/id_rsa ”  
 
- 2然后登陆github 
+ 2&emsp;然后登陆github 
  在头像旁边可以有个按钮可以选择setting->SSH keys-> New SSH key  
  将步骤a 中得到的公钥用文本编辑器打开，再复制粘贴到github上  
  最后用命令：
  `ssh git@github.com `
  测试这个公钥是否能用
+ 
 ![](https://github.com/shenlin192/My-little-technique/blob/master/Images/ssh.PNG)
+
  /\*\*\*\*\*此时就可以用shenlin192这个用户名跟github交互了\*\*\*\*\*/
  
  使用SSH的好处是每次push都不需要输入用户名和密码  
@@ -134,7 +136,11 @@ star和watch的区别在于前者不会把项目的动态展示在你的dashboar
 
 <h3 id="3.2">克隆项目后，本地操作，再推送上去</h3>
 
- 1git clone <项目地址> 
+这是最简单快捷的方法
+
+1&emsp;在gitub上新建一个仓库（repository）
+
+2&emsp;git clone <项目地址> 
  此时就会把远程项目复制到本机（同时也把.git文件配置好了）
  若是打开.git 中的 .config 文件则会看到远程分支"origin"
  及其地址url。同时本地“master”跟远程的“origin”自动关联起来了
@@ -150,7 +156,7 @@ star和watch的区别在于前者不会把项目的动态展示在你的dashboar
 
  /\*\*实际上，想要本地仓库与远程仓库关联只需要修改.config中的url即可\*\*/
 
- 2 
+3&emsp; 
  在本机对项目文件修改完成后，使用 git add 和 git commit 命令
  将修改好的文件保存在本机仓库中。然后再用以下命令push到远程服务器
    
