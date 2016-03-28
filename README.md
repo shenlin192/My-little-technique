@@ -7,6 +7,10 @@
 * [git本地仓库控制](#3)
 
 
+<!---------------------------------------------------------------------------->
+<!-------------------------基本知识----------------------------------------->
+<!---------------------------------------------------------------------------->
+
 
 <h2 id="1">Git 基本知识</h2>
  
@@ -37,9 +41,9 @@ local repository 本地仓库 保存在.git object中
 fatal: destination path 'git_instruction' already exists and is not an empty directory.`
 
 2 改变用户信息 git config
-  - git config --global user.name "SHENLIN"
-  - git config --global user.email shenlin192@gmail.com
-  - git config -l （查看config的状态）
+  - `git config --global user.name "SHENLIN"`
+  - `git config --global user.email shenlin192@gmail.com`
+  - `git config -l` （查看config的状态）
 
 3 git add 用于将工作区新文件放入 index(staging area)缓存区里
   - git add *.html 所有的html文件  
@@ -168,6 +172,7 @@ star和watch的区别在于前者不会把项目的动态展示在你的dashboar
  远程分支就是.config中remote的内容
  本地分支就是当前工作分支
 
+4&emsp; **注意** clone完远程仓库后, 步骤“1"中新建文件夹所在的 “.git ” 对应的并不是所克隆项目的git 文件。所以要进入所克隆的项目的文件夹里面重新 *右键*->*git bash here*
 
 <h3 id="3.3">多人协作使用git</h3>
  
