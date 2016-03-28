@@ -63,7 +63,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
   - git checkout branch_name 切换分支
 分支本质上是指向不同commit版本的指针
 
-![]https://github.com/shenlin192/My-little-technique/blob/master/Images/branch.PNG
+![](https://github.com/shenlin192/My-little-technique/blob/master/Images/branch.PNG)
 
 6 git log （用于查看当前分支的不同版本号）  
 提交的版本号    
@@ -71,7 +71,7 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
 日期  
 &emsp;&emsp;&emsp;&emsp;注释
 		
-![](https://github.com/shenlin192/git_instruction/blob/master/git_log.PNG)
+![](https://github.com/shenlin192/git_instruction/blob/master/Images/git_log.PNG)
 
 
 
@@ -114,7 +114,7 @@ HTTP 智能协议或哑协议都行
  最后用命令：
  `ssh git@github.com `
  测试这个公钥是否能用
-
+![](https://github.com/shenlin192/My-little-technique/blob/master/Images/ssh.PNG)
  /\*\*\*\*\*此时就可以用shenlin192这个用户名跟github交互了\*\*\*\*\*/
  
  使用SSH的好处是每次push都不需要输入用户名和密码  
@@ -175,6 +175,8 @@ star和watch的区别在于前者不会把项目的动态展示在你的dashboar
  若合并成功（没出现本地和远程仓库都对同一文件同一地方进行修改），则可以push。  
  若合并不成功，则需要人工解决进行合并，人工合并完才能push。  
  这就相当于 git 强制要求你阅读远程仓库的变化。  
+
+![](https://github.com/shenlin192/My-little-technique/blob/master/Images/multi-people.PNG)
 
 <h3 id="3.4">杂项</h3>
  git branch -vv 查看本地分支和远程分支的关系
