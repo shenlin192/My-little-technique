@@ -7,3 +7,10 @@
 
 ##彻底删除 ocaml
 ` sudo apt-get remove  ocaml-base-nox`
+
+##反色
+
+windows: 放大器 win+"+" 反色: contrl+alt+I
+ubuntu pdf: contrl+I  
+chrome 有dark theme  
+firefox 也是  
