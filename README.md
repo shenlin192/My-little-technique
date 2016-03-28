@@ -63,6 +63,8 @@ fatal: destination path 'git_instruction' already exists and is not an empty dir
   - git checkout branch_name 切换分支
 分支本质上是指向不同commit版本的指针
 
+![]https://github.com/shenlin192/My-little-technique/blob/master/Images/branch.PNG
+
 6 git log （用于查看当前分支的不同版本号）  
 提交的版本号    
 作者 邮件    
