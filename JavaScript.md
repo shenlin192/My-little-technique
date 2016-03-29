@@ -1,0 +1,1 @@
+- void String, Number, and Boolean objects. They complicate your code and slow down execution speed.
