@@ -1,2 +1,3 @@
 - void String, Number, and Boolean objects. They complicate your code and slow down execution speed.
 - NaN means "not a number", but itself is a number, and typeof NaN returns number
+- JavaScript objects cannot be compared.
