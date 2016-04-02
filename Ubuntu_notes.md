@@ -14,3 +14,8 @@ windows: 放大器 win+"+" 反色: contrl+alt+I
 ubuntu pdf: contrl+I  
 chrome 有dark theme  
 firefox 也是  
+
+##Ubuntu 无法mount到windows硬盘
+`sudo ntfsfix /dev/sdXY`  
+where XY is the partition  
+e.g sda2 or sdb1
