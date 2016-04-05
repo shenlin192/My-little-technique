@@ -27,17 +27,17 @@ We suggest you use the style attribute. It prevents styles sheets from changing 
 
  
 
-Javascrip内联和外置的区别其实也差不多
+Javascrip内联和外置的区别其实也差不多<br>
 
-JavaScript文件外部加载的好处
-统一定义JavaScript代码，方便查看，方便维护。
-使代码更安全，可以压缩，加密单个JavaScript文件。
-浏览器可以缓存JavaScript文件，减少宽带使用（当多个页面同时使用一个JavaScript文件的时候，通常只需下载一次）。
+JavaScript文件外部加载的好处<br>
+统一定义JavaScript代码，方便查看，方便维护。<br>
+使代码更安全，可以压缩，加密单个JavaScript文件。<br>
+浏览器可以缓存JavaScript文件，减少宽带使用（当多个页面同时使用一个JavaScript文件的时候，通常只需下载一次）。<br>
  
 
-JavaScript文件外部加载的注意事项
-不要把JavaScript分为多个文件，多个文件会增加服务器的负担，增加服务器的HTTP请求。
-一个JavaScript文件也会增大HTTP请求。
+JavaScript文件外部加载的注意事项<br>
+不要把JavaScript分为多个文件，多个文件会增加服务器的负担，增加服务器的HTTP请求。<br>
+一个JavaScript文件也会增大HTTP请求。<br>
  
 
 使用外部JavaScript和CSS   
