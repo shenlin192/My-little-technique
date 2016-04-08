@@ -20,19 +20,19 @@ We suggest you use the style attribute. It prevents styles sheets from changing 
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
 
-1. Css external style sheet
+- Css external style sheet
 
 优点：css在同一个文件中，当页面需要修改的时候只需要修改一个文件即可，方便维护。<br>
 缺点：HTTP请求多，浏览器要加载完CSS才能渲染页面，因此影响页面的性能。<br>
 
-2. Css internal style sheet
+- Css internal style sheet
 
 优点：内联 CSS 可以有效减少 HTTP 请求，提升页面性能，缓解服务器压力。由于浏览器加载完 CSS 才能渲染页面，因此能防止 CSS 文件无法读取而造成页面裸奔的现象。<br>
 
 缺点：每次修改css的时候需要修改多个页面<br>
 
 
-3. Javascrip内联和外置的区别其实也差不多<br>
+- Javascrip内联和外置的区别其实也差不多<br>
 
 JavaScript文件外部加载的好处<br>
 统一定义JavaScript代码，方便查看，方便维护。<br>
