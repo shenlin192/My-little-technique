@@ -66,3 +66,8 @@ src是source的缩写，指向外部资源的位置，指向的内容将会嵌�
 href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加<br>  
 **\<link href="common.css" rel="stylesheet"/\>** <br><br>
 那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用link方式来加载css，而不是使用@import方式。
+
+---
+##Css 百分比定位
+对于margin和padding，百分比按照父元素的宽计算<br>
+对于定位元素，top and botten 按照父元素的高计算, left and right 按照父元素的宽计算
