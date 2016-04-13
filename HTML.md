@@ -70,4 +70,5 @@ href是Hypertext Reference的缩写，指向网络资源所在位置，建立和
 ---
 ##Css 百分比定位
 对于margin和padding，百分比按照父元素的宽计算<br>
-对于定位元素，top and botten 按照父元素的高计算, left and right 按照父元素的宽计算
+对于定位元素，top and botten 按照父元素的高计算, left and right 按照父元素的宽计算<br>
+[margin问题] (http://www.cnblogs.com/xiaohuochai/p/5314289.html)
