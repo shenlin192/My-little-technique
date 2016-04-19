@@ -19,3 +19,7 @@ Using document.write() after an HTML document is fully loaded, will delete all e
 - NaN means "not a number", but itself is a number, and typeof NaN returns number
 - JavaScript objects cannot be compared.
 - In JavaScript, all data types have a valueOf() and a toString() method.
+
+---
+##加速
+[加速javaScript](http://www.w3schools.com/js/js_performance.asp)
