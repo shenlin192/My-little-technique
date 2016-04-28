@@ -67,11 +67,6 @@ href是Hypertext Reference的缩写，指向网络资源所在位置，建立和
 **\<link href="common.css" rel="stylesheet"/\>** <br><br>
 那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用link方式来加载css，而不是使用@import方式。
 
----
-##Css 百分比定位
-对于margin和padding，百分比按照父元素的宽计算<br>
-对于定位元素，top and botten 按照父元素的高计算, left and right 按照父元素的宽计算<br>
-[margin问题] (http://www.cnblogs.com/xiaohuochai/p/5314289.html)
 
 ---
 ##DOM
