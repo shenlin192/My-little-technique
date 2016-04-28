@@ -11,3 +11,9 @@
 
 ##浮动
 浮动出现的意义其实只是用来让文字环绕图片而已，仅此而已。而我们目前用浮动实现页面布局本不是浮动该干的事情。
+
+---
+##Css 百分比定位
+对于margin和padding，百分比按照父元素的宽计算<br>
+对于定位元素，top and botten 按照父元素的高计算, left and right 按照父元素的宽计算<br>
+[margin问题] (http://www.cnblogs.com/xiaohuochai/p/5314289.html)
