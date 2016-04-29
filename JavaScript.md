@@ -23,3 +23,18 @@ Using document.write() after an HTML document is fully loaded, will delete all e
 ---
 ##加速
 [加速javaScript](http://www.w3schools.com/js/js_performance.asp)
+
+##注意
+alert(NaN == NaN); //outputs “false”<br>
+用isNaN（）函数解决<br><br>
+```
+function testFunc() {  
+//leave the function blank  
+}  
+alert(testFunc() == undefined); //outputs “true”
+```
+undefined is the value assigned when a variable is declared and not initialized
+```
+alert(null == undefined); //outputs “true”
+```
+null is the value used to represent an object that doesn’t exist
