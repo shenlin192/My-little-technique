@@ -38,3 +38,12 @@ undefined is the value assigned when a variable is declared and not initialized
 alert(null == undefined); //outputs “true”
 ```
 null is the value used to represent an object that doesn’t exist
+
+##parseInt()
+```
+var iNum1 = parseInt(“1234blue”); //returns 1234
+var iNum2 = parseInt(“0xA”); //returns 10
+var iNum3 = parseInt(“22.5”); //returns 22
+var iNum4 = parseInt(“blue”); //returns NaN
+var iNum1 = parseInt(“AF”, 16); //returns 175
+```
