@@ -65,4 +65,23 @@ var oCar2 = new Car(“blue”, 3, 25);
 oCar1.drivers.push(“Matt”);
 alert(oCar1.drivers); //outputs “Mike,Sue,Matt”
 alert(oCar2.drivers); //outputs “Mike,Sue”
+``` 
+##Inheritance
+An example of inheritance.
+```
+function ClassA(sColor) {
+this.color = sColor;
+}
+ClassA.prototype.sayColor = function () {
+alert(this.color);
+};
+
+function ClassB(sColor, sName) {
+ClassA.call(this, sColor);
+this.name = sName;
+}
+ClassB.prototype = new ClassA();
+ClassB.prototype.sayName = function () {
+alert(this.name);
+};
 ```
