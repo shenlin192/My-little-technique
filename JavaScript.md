@@ -47,3 +47,22 @@ var iNum3 = parseInt(“22.5”); //returns 22
 var iNum4 = parseInt(“blue”); //returns NaN
 var iNum1 = parseInt(“AF”, 16); //returns 175
 ```
+
+##Building an Object
+The most commely used way is to combine a constructor(define non-functional attributes) and the prototype chain(define functional attributes)
+```
+function Car(sColor, iDoors, iMpg) {
+this.color = sColor;
+this.doors = iDoors;
+this.mpg = iMpg;
+this.drivers = new Array(“Mike”, “Sue”);
+}
+Car.prototype.showColor = function () {
+alert(this.color);
+};
+var oCar1 = new Car(“red”, 4, 23);
+var oCar2 = new Car(“blue”, 3, 25);
+oCar1.drivers.push(“Matt”);
+alert(oCar1.drivers); //outputs “Mike,Sue,Matt”
+alert(oCar2.drivers); //outputs “Mike,Sue”
+```
