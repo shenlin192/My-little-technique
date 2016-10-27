@@ -1,0 +1,31 @@
+In command mode
+:w save
+:w! force sace
+:q quit
+:q! force quit
+:w b.php save as
+:set nu (show line number)
+:set nonu (show line number)
+:set tabstop =2 (change defaut tab space)
+:set autoindent
+:/word (find a word)
+:n1,n2s/search/replace/g (from line n1 to line n2, search and replace globally)
+:u (undo)
+:dd (cut)
+:yy (copy)
+:3dd (cut 3 lines)
+:p (paste)
+:r filename (load file)
+:sp (open a new window)
+:%y (yank all)
+
+In normal mode
+yim (yank a word)
+ctrl+w+上/下  改变选择窗口
+
+
+
+how to enable js in vim ?
+-> http://panweizeng.com/write-javascript-in-vim.html
+-> http://www.jianshu.com/p/4a8b0e3503fa
+中间会遇到各种bug 比如要安装python 2.7，vim要升级等等，才能完成安装步骤
