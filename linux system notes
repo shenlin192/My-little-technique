@@ -1,0 +1,427 @@
+*****************第一章：基本概念****************
+历史起源于贝尔实验室的unix
+linux 兼容 unix 的一切，哲学思想相同但是两个不同的东西
+
+a. 操作系统？（本身也是一个软件）
+1 硬件
+2 内核
+3 库（可选，对内核的各种硬件接口进行二次封装）
+4 应用软件
+
+b. 协议？
+1 GPL 一个严苛的开源协议，用了它就要开源（general programme licence）
+2 BSD 用了它，自己改的可以不开源
+
+c. linux gnu gcc？
+Linux 本身只是内核
+GNU 提供软件
+
+gcc是一个c语言编译器（它也是一个程序，也需要被编译）
+
+在cpu中运行的程序叫进程，进程之间互相独立
+cpu有优先级 0（内核） 1 2 3（用户）
+
+d.如何做到夸操作系统平台运行软件？
+POS：Potable Operating System
+POSIX: 是一个标准（符合POSIX标准 API相同ABI不同）
+API：Application Program Interface
+ABI: Application Binary Interface
+
+由于不同平台使用不同的ABI，所以要事先编译好不同的二进制文件。
+操作系统安装前，人们把安装程序也事先编译好，一起放入操作系统的二进制中
+1 X86
+2 AMD64
+3 powerPC
+
+e. Linux发行版（人们已经编译好的）三大公司
+1 Redhat (Linux+GNU+安装程序)
+  服务赚钱
+  Patch 补丁赚钱（遵循GPL协定，开源，但不提供编译服务）
+2 CentOS (community entreprise OS) 看不顺眼，编译好每个redhat 补丁
+  redhat 6.0 7.0 8.0 9.0 登峰造极了 2003年以后不再维护，捐给了Fedora （版以支持新硬件，新功能为主）
+  redhat Entreprise Linux 3 4 5 登峰造极了 以稳定性为主（十几年不关机）
+
+3 Debian(ubuntu->mint)
+
+以下两个比较原汁原味，高级用户才能用
+siackware
+gentoo
+
+LFS：Linux from Scratch 更高级用户才能用
+这个Linux就是每一个文件都是由（包括内核）自己编译出来的，这是最纯洁的linux
+
+4 SUSE 欧洲最流行
+	有一个企业版
+	一个开源版	
+
+5 现在linux已经有几百个发行版
+
+
+Linux：程序版本
+Linux 本身是一个软件，有不同的版本
+	alpha：内测
+	beta:公测
+	RC:release candidate
+3.5.4
+3 主版本号
+5 次版本号
+4 修正号（改bug）
+
+不同公司用Linux内核开发出来的发行版又有不同的版本号
+
+f. 正统的UNIX
+   BSD 4.4 Lite
+	FreeBSD
+	OpenBSD
+	NetBSD
+
+Unix 所有权（贝尔实验室->nobel公司->开源组织）
+以下三个公司的unix都是基于BSD 开发出来的
+IBM: AIX
+HP: HP-UX
+SUN: solaris
+
+安桌比苹果不流畅的原因
+Androd：Linux+Java 虚拟机 
+iOS：FreeBSD+ObjectC 
+
+g.CPU
+Inter：
+	x86
+	x86_64
+	安腾64
+惠普：
+	ALpha
+IBM：
+	Power （AIX）
+Orcal：
+	UltraSparc：Solaris
+motolola：
+	M68000
+apple+motolola+HP:
+	PowerPC
+
+
+总结：自由软件
+1 为任何目的运行程序的自由
+2 学习和修改源程序的自由
+3 重新分发程序的自由
+4 基于某源程序开发衍生版的自由
+
+
+/******************第二章 Linux哲学******************/
+1 一切皆文件（99%）
+2 由体积小且目的单一的程序组成
+3 组合小程序完成复杂任务
+4 尽可能避免捕获用户接口
+5 所有配置数据都保存在文本文件中
+
+发行商的发行版通常是二进制的
+发行版之间基本相同
+文件存放路径、名称、语法格式
+软件包管理、默认工具有所不同
+
+虚拟机软件：模拟器
+i3 i5 都支持cpu虚拟化这样 32 位的虚拟机上可以装64位的系统
+vmware
+virtualbox
+
+/**********************引导终端和shell************************/
+Linux系统支持多用户操作
+物理终端 （在机器启动的时候，在人可以输入信息之前）
+虚拟终端 （是用软件虚拟出来的硬件）mingetty tty 就是终端
+
+
+Ctrl+ALT+F(1~6)可以在不同终端进行登录 
+
+SHELL （应用程序）两大类 
+	GUI：
+		Gnome,C
+		KDE,C++
+		Xface，轻量级
+	CLI：
+	不同类型的shell
+		sh 
+		csh
+		ksh
+		bash(默认) 
+		tcsh
+		ssh
+
+SHELL 的功能
+1给我们提供输入命令的接口
+2有编程能力 （脚本编程） 如windows的批处理
+
+开机过程：
+1通电
+2内核启动
+3守护进程 如windos的服务 是其他软件运行的基础
+
+ echo $SHELL 可以知道是那个shell
+ tty 可以知道在哪个虚拟终端
+
+对于linux而言，图形界面只是一个外围程序 （windows 2008 以前都在内核中）
+ 
+ startx &（只有此前从来没有启用图形界面才需要此命令）
+ startx -- :2 & (桌面也可以启动多个) 
+
+模拟终端（pts）
+图形界面也叫图形终端，是运行于虚拟终端之上
+在图形界面上 terminal 中输入命令，用的是模拟终端
+远程登录也是用 模拟终端
+
+总结：
+物理终端 /dev/console
+虚拟终端 /dev/tty（1，6）
+模拟终端 /dev/pts/#
+图像终端
+
+一切皆文件：/dev/keyboard
+键盘鼠标都是文件
+
+prompt：命令提示符 
+# root用户
+$ 普通用户
+	
+shell   可以让用户自定义工作环境
+	要环境变量定义
+
+外部命令：在系统的某个路径下，有一个同名的可执行程序，非shell自带
+	$type 加命令名 可查看命令是内部还是外部的
+
+路径：绝对路径 以/开头 
+	$pwd 显示当前绝对路径
+	Linux 文件名：除了换行符都可以
+	Linux 不靠扩展名区分文件类型，没有注册表的概念
+	但最好有扩展名方便阅读
+	Linux 的目录也是文件（因此不能跟普通文件同名）
+
+/***********************命令****************************/
+#，$ 
+command
+
+command [option] [arguments]
+
+option：用于调整命令执行行为的开关
+   短选项： -h， -l, -s
+	有些命令的短选项可以组合，
+	有些可以不带横线如： ps aux， tar xf
+	有些短选项需要带参数：-L 512M 
+   长选项： --help， --list
+	常选项不能组合
+	如果需要参数，通常需要=号，--size==1G
+
+arguments:命令的作用对象
+	
+如何获取命令帮助：
+内部命令：
+# help COMMAND
+外部命令：
+# COMMAND --help
+# man COMMAND
+
+man手册是有章节概念的（一般8个）：
+1* 用户命令
+2 系统调用
+3 库调用
+4 特殊文件 如： /dev/tty 等设备文件
+5* 文件格式（命令的配置文件语法）
+6 游戏相关
+7 杂项
+8* 管理员命令 如：fdlsk 磁盘分区  
+
+
+翻屏操作：
+   向后：SPACE
+   向前：b
+   向后一行：ENTER
+   向前一行：k
+
+搜索：
+/ 关键字 从文件首部开始搜索
+? 关键字 从文件尾部开始搜索
+
+n： 下一个
+N： 上一个
+
+命令语法
+[]: 可选内容
+<>: 必须给出内容
+a|b|c：多选一
+...: 可以有多个
+
+
+# info COMMAND
+   有超链接文档
+
+/usr/share/doc/APP_NAME 额外帮助文件
+有 README， INSTALL 等软件自带文档
+
+#######其他常见系统命令
+
+# date看时间
+linux 有两个时间（主板时间和系统时间） 
+主板时间 hwclock
+
+#cal 看日历
+cal 3 2011 看2011年3月
+
+/********************************用户**********************/
+用户：获取资源或服务的凭证
+
+家目录：#cd 直接回到家目录
+	#cd～USERNAME 去其它用户的家目录
+ 
+相对路径：.当前目录 ..上层目录
+	cd ../..上层的上层
+
+	cd - 上一次的目录
+
+
+/***************************linux文件类型***********************/
+
+1 普通文件， -，f
+2 目录文件， d
+3 链接文件，
+	符号链接， l
+	硬链接，-
+4 特殊文件 用于作为硬件设备间入口文件
+	块设备：随机，安块存取 b
+	字符设备：线性，逐个字符存取 c
+5 套接字文件 socket， s
+6 命名管道pipe，p
+
+ls命令 是list的简写
+1#：ls -l
+	drwx------ 2 shen shen 4,0K oct.  26 11:01 ssh-MmBuEgRziVgX
+解释：
+d	    rwx------		2	   shen     shen   4,0K	   oct.  26 11:01  ssh-MmBuEgRziVgX
+文件类型 文件权限（3类用户） 文件硬链接个数 文件所有者 文件组 文件大小 最近修改时间   文件名
+
+
+/*************************文件结构标准*********************/
+/bin: 二进制， 所有用户都可以使用
+/sbin：二进制，管理员才能用
+/boot：于系统启动相关 内核，bootloader的存放路径
+	（在启用根之前，首先有boot）
+/dev：设备文件（特殊文件位置）
+/etc：配置文件
+	/etc/x11：图形界面的配置文件
+/home：普通用户的家目录， /home/USERNAME
+/lib：基本共享库，内核模块
+/media：移动媒介提供挂载点
+/mnt：非移动设备挂载点
+/opt：另类的第三方程序安装的位置（现在用的不多）
+/root：管理员的家目录
+/srv：系统服务运行的中间数据存放位置
+/tmp：临时文件，绝大多数软件都会用到，是一个公共场所
+/usr: 只读文件 有诸多系统运行相关的只读文件
+	/usr/share：平台无关数据	
+	/usr/bin (2)
+	/usr/sbin
+	/usr/lib
+
+	/usr/local/bin (3)
+	/usr/local/sbin
+	/sur/local/lib
+
+	操作系统软件有三类
+	1 系统自身启动和运行相关 /bin
+	2 系统基本功能相关，但于启动无关 /usr/bin
+	3 用户额外安装 /usr/local/bin
+
+	/usr/include 所有程序运行相关的头文件（一堆 .h文件）
+	/usr/src：源程序地方
+
+/var: 这个文件会日渐变大
+	/var/log:日志文件
+	/var/spool:缓冲数据
+	/var/run:守护进程
+	/var/lock:避免两个用户同时编辑同一个文件就要lock
+	/var/cache:缓存数据
+	/var/lib:可变状态信息
+
+伪文件系统（关机就没有了）
+	/proc 内存中内核信息 如修改tcpIp 协议
+	/sys 跟硬件设备相关的内核信息 如修改 硬盘调度
+
+/misc 杂项
+
+
+/*****************************文件命令****************************/
+目录文件：
+	mkdir
+		eg:mkdir /tmp/(p,q)  -pv
+		eg:mkdir (x,y)_(m,n) -pv	
+		
+ 	rmdir 只能删除空目录（不常用）
+	
+	tree:
+		
+文件：
+	touch
+ 	cp 
+	eg:cp a b c d (目标是最后一个参数)
+	  :cp /ect/a /tmp/abc (若abc不存在，则复制并重命名；反之复制并覆盖)
+	  :cp -r 才能复制目录
+	mv:目录不能覆盖文件，目录只能移动到目录中 
+	rm: -r 才能删除目录 -f 强制删除 
+	stat
+
+文件有三个时间：
+最近一次访问时间
+最近一次modify：文件内容
+最近一次change：元数据
+
+#file FILENAME 用于显示文件内容的类型
+
+文本文件查看命令
+#cat， 
+#cat FILE1 FILE2 可以连接显示两个不同的文件
+	-n：显示行号
+	-E：显示换行符
+#tac 是cat的倒置（没什么作用）
+#more 分屏查看命令
+#less 使用效果跟man一样（最好用）
+#head
+#cut
+
+
+/********************命令行快捷键***************/
+ctrl+a to beginning
+ctrl+e to end
+ctrl+u clean command until beginning
+ctrl+k clean command until end
+ctrl+l clear
+ctrl+c cancle command
+
+#hash
+记录曾经使用过的命令，第二次使用的使用就只需要在hash表中找了
+
+#！24：执行命令历史中的第24条命令
+#！！：执行上一条命令
+#！-n：执行倒数第n条命令
+#！echo：执行最近一次以echo开头的命令
+# Esc .|alt+.|!+$：三种方式调用上一个命令最后一个参数
+
+#export HISTCONTROL=ignorespace 不记录以空格开头的命令
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
