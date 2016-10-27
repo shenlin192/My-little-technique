@@ -1,3 +1,0 @@
-#WebRTC
-
-apprtc.appspot.com
