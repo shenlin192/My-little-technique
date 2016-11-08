@@ -1,0 +1,33 @@
+# Ubuntu 4.01.0 遇到的问题
+
+##解决Ubuntu中无法连接wifi的方法
+`sudo bash`    
+`echo "options rtl8723be fwlps=0 swlps=0" > /etc/modprobe.d/rtl8723be.conf `   
+`reboot`   
+
+##彻底删除 ocaml
+` sudo apt-get remove  ocaml-base-nox`
+
+##反色
+windows: 放大器 win+"+" 反色: contrl+alt+I
+ubuntu pdf: contrl+I  
+chrome 有dark theme  
+firefox 也是  
+
+##Ubuntu 无法mount到windows硬盘
+`sudo ntfsfix /dev/sdXY`  
+where XY is the partition  
+e.g sda2 or sdb1
+
+##ubuntu 循环登录
+按 ctrl+alt+F1 进入 tty1
+输入 
+$ cd~
+$ sudo chown shen:shen .Xauthority
+$ ls .Xauthority -l
+再按 ctrl+alt+F1 返回图形登录界面
+
+
+#xpad 可以打开便签
+
+
