@@ -141,7 +141,7 @@ HTTP 智能协议或哑协议都行
  
  使用SSH的好处是每次push都不需要输入用户名和密码  
  
- 3 SSH 
+ 3 SSH has different granularity
  在用户设置中设置SSH，拥有私钥的人可以对用户所有仓库进行修改  
  在项目中设置SSH，拥有私钥的人可以对仓库进行修改  
  
