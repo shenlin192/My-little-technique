@@ -142,10 +142,12 @@ HTTP 智能协议或哑协议都行
  使用SSH的好处是每次push都不需要输入用户名和密码  
  
  3 SSH has different granularity
+ 
  在用户设置中设置SSH，拥有私钥的人可以对用户所有仓库进行修改  
  在项目中设置SSH，拥有私钥的人可以对仓库进行修改  
  
  4 在Linux系统中使用SSH 可能出现 Error: Agent admitted failure to sign 
+ 
    解决方案：在项目路径下运行 `eval "$(ssh-agent -s)"` + `ssh-add`
 
 
