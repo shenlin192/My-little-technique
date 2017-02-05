@@ -1,0 +1,31 @@
+"enable syntax highlight
+filetype plugin on
+syntax on
+
+"costumization
+set tabstop=2
+set nu
+
+"youcompleteme
+set nocompatible
+
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'marijnh/tern_for_vim'
+
+call vundle#end()
+
+filetype plugin indent on
+
+
+
+
+
