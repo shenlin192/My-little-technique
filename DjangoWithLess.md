@@ -3,8 +3,11 @@ There are three main steps to automatically compile less files into css files of
 1. Install the less compiler in your machine
 2. Install Django Static Precompiler
 3. Configuration and usage of Django Static Precompiler
+
 ## Install less compiler
+
 ### Prerequests
+
 1. The nodejs npm (node package management is needed to install less compiler)
     
     Step 1.1 to 1.2 are obligatory
@@ -26,20 +29,25 @@ There are three main steps to automatically compile less files into css files of
     Step 1.7 is optional but recommended
     
     1.7. link nodejs with node. 
+    
     `$ ln -s /usr/bin/nodejs /usr/bin/node`
 
 ### Install less
 1. `$ npm install -g less`
 
 remember the path you install less compiler. By default it will be "/usr/local/bin/lessc"
+
 This path will be used in your setting.py
 
 
 ## Install Django Static Precompiler
+
 ### Prerequest
+
 We neede `pip` to install django-static-precompiler
 
 `/path/to/projectRoot/$ sudo easy_install pip`
+
 ### Install django-static-precompiler
 
 `/path/to/projectRoot/$ pip install django-static-precompiler`
@@ -50,6 +58,7 @@ We neede `pip` to install django-static-precompiler
     1.1 Add `static_precompiler` to `INSTALLED_APPS` setting.
 
     1.2 Add `StaticPrecompilerFinder` to `STATICFILES_FINDERS`
+    
         ```
         STATICFILES_FINDERS = (
             'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -77,12 +86,18 @@ We neede `pip` to install django-static-precompiler
     {% load static %}
     <link rel="stylesheet" href="{% static "path/to/styles1.less"|compile %}" />
     ```
+    
 5. You may need to give permission to the static folder (beacause the complied css files will be placed in /static/COMPILED folder by default)
+
 `$ chmod -R 777 static`
 
+
 ## More information
+
 [nodejs](https://nodejs.org/en/download/package-manager/)
+
 [less](http://lesscss.org/)
+
 [django-static-precompiler](http://django-static-precompiler.readthedocs.io/en/stable/)
 
 
