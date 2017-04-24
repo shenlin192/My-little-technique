@@ -6,10 +6,12 @@ Similar to using Less in Django Static Precompiler, you will need to
 
 1. install a babel compiler 
 2. make configurations on `setting.py` file
-ss
+
 ## Install babel compiler in your computer
 
 `$ npm install -g babel-cli`
+
+Remember the path babel installed. You will need it in the `setting.py` 
 
 `$ npm install -g babel-preset-es2015`
 
@@ -24,7 +26,7 @@ Add the following code into `STATIC_PRECOMPILER_COMPILERS`
     }),
 ```
 
-example code with less 
+Example code with less and babel
 ```
 STATIC_PRECOMPILER_COMPILERS = (
     ('static_precompiler.compilers.LESS', {"executable": "/usr/local/bin/lessc"}),
@@ -42,3 +44,4 @@ STATIC_PRECOMPILER_COMPILERS = (
 Notice: the extension name needs to be changed into `.es6`
 
 ## More information
+[babel](https://babeljs.io/)
