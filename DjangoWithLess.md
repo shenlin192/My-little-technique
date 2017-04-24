@@ -1,4 +1,4 @@
-# Documentation on using Django Static Precompiler
+# Documentation on using Django Static Precompiler 1
 There are three main steps to automatically compile less files into css files of our project 
 1. Install the less compiler in your machine
 2. Install Django Static Precompiler
