@@ -15,9 +15,9 @@ Remember the path babel installed. You will need it in the `setting.py`
 
 `$ npm install -g babel-preset-es2015`
 
-> Out of the box Babel doesn’t do anything. It basically acts like const babel = code => code; by parsing the code and then generating the same code back out again.
+> Out of the box Babel doesn’t do anything. It basically acts like const babel = code => code; by parsing the code and then generating the same code back out again. You will need to add some plugins for Babel to do anything (they affect the 2nd stage, transformation). 
 
-You will need to add some plugins for Babel to do anything (they affect the 2nd stage, transformation).
+`babel-preset-es2015` is used to tell Babel transform source code into es2015
 
 ##  Configurations on setting.py
 
