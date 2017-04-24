@@ -59,13 +59,13 @@ We neede `pip` to install django-static-precompiler
 
     1.2 Add `StaticPrecompilerFinder` to `STATICFILES_FINDERS`
     
-        ```
-        STATICFILES_FINDERS = (
-            'django.contrib.staticfiles.finders.FileSystemFinder',
-            'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-            "static_precompiler.finders.StaticPrecompilerFinder",
-        )
-        ```
+    ```
+    STATICFILES_FINDERS = (
+        'django.contrib.staticfiles.finders.FileSystemFinder',
+        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+        "static_precompiler.finders.StaticPrecompilerFinder",
+    )
+    ```
     
     1.3 Specify the path to your less compiler 
     ```
