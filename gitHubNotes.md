@@ -229,3 +229,17 @@ star和watch的区别在于前者不会把项目的动态展示在你的dashboar
  单人操作强行push
 	`git push origin master --force`
 
+
+## Problems that `.gitignore` file doesn't work
+
+1. Remove all cached files to ensure there are no .gitignore files being tracked
+`$ git rm --cached -r .`
+
+2. 
+
+`$ git commit`
+
+3. Track the files that should be tracked
+
+`$ git add .`
+
