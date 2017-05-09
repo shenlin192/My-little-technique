@@ -146,4 +146,15 @@ A `row` class is needed whenever you use a `col-*-*` class
 [This](http://stackoverflow.com/questions/24659471/nested-rows-with-bootstrap-grid-system
 ) article explains how to use bootstrap nested row correctly. 
 
+3. Using the same bootstrap gris structure for all kinds of screen sizes is not necessary.
 
+For example 
+```
+// This is the same as the second code snippe but rededundent
+<div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+</div>
+
+// This is the same as the first code snippe but much better
+<div class="col-sm-offset-1 col-sm-10">
+</div>
+```
