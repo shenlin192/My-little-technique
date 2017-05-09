@@ -8,8 +8,10 @@ The propose of this standard is to ensure every developper write the frontend co
   - avoid common mistakes
 
 If you know what you are doing exactly, ignore all the standards listed here.
+
 Feel free to modify or add more rules into the standard. 
 
+This documentation is the standard of coding. Remember to read How Wen's UNIVERS GRAPHIQUE, it's our standard of design. 
 
 
 ## HTML
@@ -45,6 +47,7 @@ Feel free to modify or add more rules into the standard.
 7. If you are writing a simply page, do not seperate all `@media` logic in little pieces, mix them according to different section of the HTML structure.
 8. Do not leave the unused style code in your css files. Remember to delete them after your test
 9. Think about to code in less. It can help you better organise your code. 
+10. It's recommended to style the `font-size` with unit `rem` unit. By doing so, whenever you modify the font-size of root element (html), all elements with `rem` units of the entire page will change accordingly.  
 
 A good example to use breakpoints
 
@@ -68,15 +71,15 @@ A good example to use breakpoints
 ```
 
 ```
-// For screens between 768px and 998px
-@media (min-width:768px) and (max-width:998px){
+// For screens between 768px and 992px
+@media (min-width:768px) and (max-width:992px){
   .example{
-   rule 2; // rule 2 is overwrite between 768px and 998px
+   rule 2; // rule 2 is overwrite between 768px and 992px
   }
 }
 ```
 
-For screen larger than 998px, the second code snippet rule 2 will be apply.
+For screen larger than 992px, the second code snippet rule 2 will be apply.
 
 
 ## Jquery
@@ -85,7 +88,7 @@ For screen larger than 998px, the second code snippet rule 2 will be apply.
 2. Do not put every thing inside `$(document).ready` because:
    
 	- It's just for initialization of a page.
-	- most of the function definition should be outside `$(document).ready` 
+	- most of the function definitions should be outside `$(document).ready` 
 	- most of the immidiately excute functions should be `$(document).ready`  
 
 3. Use a variable to store the jQuery selected elements in order to avoid code redudunce  
@@ -158,3 +161,5 @@ For example
 <div class="col-sm-offset-1 col-sm-10">
 </div>
 ```
+
+
