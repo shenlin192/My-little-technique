@@ -42,7 +42,9 @@ Feel free to modify or add more rules into the standard.
 4. Do not use 'cm' as CSS style unit
 5. Do not use !important if not absolutly necessary.
 6. If you are writing a complicated page, do not mix all `@media` logic together, seperate them according to the HTML structure.
-7. If you are writing a simply page, do not seperate all `@media` logic in little pieces, mix them according to different section of the HTML structure, 
+7. If you are writing a simply page, do not seperate all `@media` logic in little pieces, mix them according to different section of the HTML structure.
+8. Do not leave the unused style code in your css files. Remember to delete them after your test
+9. Think about to code in less. It can help you better organise your code. 
 
 A good example to use breakpoints
 
