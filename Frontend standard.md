@@ -36,8 +36,8 @@ Feel free to modify or add more rules into the standard.
 
   - 0 ~ 480px
   - 480 ~ 768px
-  - 768px ~ 998px
-  - 998px ~ 1280px
+  - 768px ~ 992px
+  - 992px ~ 1280px
   
 4. Do not use 'cm' as CSS style unit
 5. Do not use !important if not absolutly necessary.
