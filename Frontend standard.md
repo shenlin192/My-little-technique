@@ -81,6 +81,9 @@ A good example to use breakpoints
 
 For screen larger than 992px, the second code snippet rule 2 will be apply.
 
+## JavaScript
+It's recommended to code in es6, for it will simplify your code. No need to be afraid
+of this new technic or the compatibility. [We can compile it into es5](https://github.com/shenlin192/myNotes/blob/master/DjangoWithBabel.md).
 
 ## Jquery
 
