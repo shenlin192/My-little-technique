@@ -11,7 +11,7 @@ If you know what you are doing exactly, ignore all the standards listed here.
 
 Feel free to modify or add more rules into the standard. 
 
-This documentation is the standard of coding. Remember to read How Wen's UNIVERS GRAPHIQUE, it's our standard of design. 
+This documentation is the standard of coding. Remember to read Hao Wen's UNIVERS GRAPHIQUE, it's our standard of design. 
 
 
 ## HTML
