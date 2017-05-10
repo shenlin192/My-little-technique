@@ -36,9 +36,9 @@ This documentation is the standard of coding. Remember to read Hao Wen's UNIVERS
 2. Don't hestate to read HaoWen's charte-graphique
 3. Do not write breakpoint randomly. The suggested breakpoints are
 
-  - 0 ~ 480px
-  - 480 ~ 768px
-  - 768px ~ 992px
+  - 0 ~ 479px
+  - 480 ~ 767px
+  - 768px ~ 991px
   - 992px ~ 1280px
   
 4. Do not use 'cm' as CSS style unit
@@ -72,7 +72,7 @@ A good example to use breakpoints
 
 ```
 // For screens between 768px and 992px
-@media (min-width:768px) and (max-width:992px){
+@media (min-width:768px) and (max-width:991px){
   .example{
    rule 2; // rule 2 is overwrite between 768px and 992px
   }
