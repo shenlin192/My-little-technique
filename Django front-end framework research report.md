@@ -170,5 +170,5 @@ Separation of the front-end and back-end is **not** the tradictionaly way django
 A real separation is: the server (web service provider) provides only APIs and the client (web service comsummer) can be a browser, an mobile application, other servers, or even a coffee machine, a car, etc. Whatever techniques the client use will **not** have **any** affect on the server.
 
 This book may help you understand more.
-[Api for dummies](ftp://public.dhe.ibm.com/software/uk/pdf/api-service/WSM14025USEN.pdf) ( May at least finish reading the table of centent)
+[Api for dummies] ftp://public.dhe.ibm.com/software/uk/pdf/api-service/WSM14025USEN.pdf ( May at least finish reading the table of centent)
 
