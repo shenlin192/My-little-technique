@@ -123,15 +123,46 @@ Front-end framework can help us write stable code and avoid possible bugs.
 ### Improve maintainability
 #### Example
 ** Case 1 **
+
 Please review example 2. This code snippet is for the propose to create a new question. It's a separated HTML template file that will be rendered and be sent back to the click when a user click on `poser une question`. But in fact, this template alse exists in another HTML file which is used to describe the entire page of pageEntreprise for the first time a client visit our site. Thus, if we want to modify some structure of the layout of `question`, 2 files needed to be changed in our case.
 
 With front-end frameworks, we use only one template as mentioned in the section "Reduce the volume of response". So only one file needs to be changed.
 
 ** Case 2 **
 
+Image we have the HTML code sturcture as example 5. With Django, if we want to change the  `variable` in JavaScript, 3 jQuery causes are needed in order to find these 3 dispersed elements.
 
+However, with front-end framework, the `variable` is a JavaScript variable rather than a Django varibale. So that we can modify it directly with a cause like `variable=newValue`.
+```
+# example 5
+<div>
+    Some where in a page{{ variable }}
+</div>
+.....
+
+<span>
+    Some where else in a page
+    {{ variable }}
+</span>
+......
+<section>
+    <p>
+    Some where else in a page
+    {{ variable }}
+    </p>
+</section>
+```
+If the variable is repeated 100 times everywhere in the page, then we will need 100 jQuery cause to find out where they are. A better solution is to add 100 times a class to these elements. With front-end framework, all you need is to change the value of the `variable` for once.
+
+
+** Case 3 **
+
+Front-end framewokrs stucture the code in different components as shown in the figure below. We can define our JavaScript and StyleSheet in different granularities( global level, root component level, sub component level ... ). And we will need centralize of less no more. Beacuse the framework has provided you the ability to centralize everything (html, Js, Css...) in all granularities.
+
+![Alt](https://camo.githubusercontent.com/14e5f4477f49cf0fc0d8f228facb17772a0b1025/687474703a2f2f626c6f672e6576616e796f752e6d652f696d616765732f7675652d636f6d706f6e656e742e706e67)
 
 #### Conclusion
+Front-end framewokrs can largely reduce code reduduncy and improve code maintainability.
 
 
 ### Separation of the front-end and back-end
@@ -140,14 +171,3 @@ A real separation is: the server (web service provider) provides only APIs and t
 
 This book may help you understand more.[Api for dummies](ftp://public.dhe.ibm.com/software/uk/pdf/api-service/WSM14025USEN.pdf) ( May at least finish reading the table of centent)
 
-## Why Angular
-
-
-
-## Why Vue
-1. Vue is easy to learn and well documented.
-2. Vue can perfectly cooperate with jQuery.
-3. I've already found a way to deploy vue in our server.
-
-## reference
-http://www.valuecoders.com/blog/technology-and-apps/vue-js-comparison-angular-react/
