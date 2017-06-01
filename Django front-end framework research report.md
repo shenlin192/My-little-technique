@@ -87,6 +87,7 @@ Let's anaylse this example. This time, we will communicate with the server becau
     "user":{
         "name":"...",
     }
+    ...
 }
 ```
 
