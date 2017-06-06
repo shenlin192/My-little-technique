@@ -296,6 +296,9 @@ From Phase 3 to 8 are the phases paralle.
 Phase 9 and 10 are the final phases.
 
 The entire project will take **53 days** to finish.
-Taken into account that HaoWen can cooperate with me in some parts of the project, and suppose it will take me 3 days to teach him some basic knowledge of Backend, the total time cost for the project will be 
+Taken into account that HaoWen can cooperate with me in some parts of the project, and suppose it will take me 3 days to teach him some basic knowledge on backend as well as the frontend, the total time cost for the project will be: 
 
 **53 days \*0.7+ 3days = 40 days**.
+
+
+
