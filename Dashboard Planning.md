@@ -32,6 +32,7 @@ Total time: **3 days**
 
 ## Phase 3 
 Development of `table de board`
+
 *Tasks*
 1. Notification  
 
@@ -71,6 +72,7 @@ Total time: **4 days 7 hours = 5 days**
 
 ## Phase 4
 Development of `portefeuille`
+
 *Tasks*
 1. Mes investissement
 
@@ -100,6 +102,7 @@ Total time: **2.5 days 5.5 hours = 4 days**
 
 ## Phase 5
 Development of `Entreprise`
+
 *Tasks*
 1. Front-end
 
@@ -113,6 +116,7 @@ Total time: **0.5 days**
 
 ## Phase 6  
 Development of `Message`
+
 *Tasks*
 1. Conversations
     ***\* It's an embeded telegrame. Not sure if it's realisable.***
@@ -141,6 +145,7 @@ Total time: **6 days+**
 
 ## Phase 7
 Development of `profil`
+
 *Tasks*
 ### 1. Profil in menu
 
@@ -274,6 +279,7 @@ Total time: **20.5 days 10.5h = 22 days**
 
 ##  Phase 8 
 CSS Detail implementation and optimization
+
 *Task*
 1. Implementation some special effects of CSS in details for each page
 
@@ -283,6 +289,7 @@ Total time: **4 days**
 
 ## Phase 9 
 Code optimization and documentation
+
 *Task*
 1. Optimize the code
 
@@ -296,6 +303,7 @@ Total time: **2 days**
 
 ## Phase 10 
 Unit Test for all the pages
+
 *Task*
 1. For each functionality there should be at least one test  
 Total time: **3 days**
