@@ -34,6 +34,7 @@ Total time: **3 days**
 Development of `table de board`
 *Tasks*
 1. Notification  
+
     1.1 Front-end (mobile and web)
     
     **1 hours**
@@ -43,6 +44,7 @@ Development of `table de board`
     **\*undefine (hypothesis 2 days)**
     
 2. Entreprise de la semaine
+
     2.1 Front-end for web
     
     **1 day**
@@ -83,7 +85,9 @@ Development of `portefeuille`
     2.2 back-end
     
     **0.5 h**
+    
 2. Repartition de Mon Portefeuille
+
     2.1 front-end (d3 js is required)
     
     **0.5 day**
@@ -114,6 +118,7 @@ Development of `Message`
     ***\* It's an embeded telegrame. Not sure if it's realisable.***
 
 2. Contacts
+
     2.1 front-end (mobile and web)
     
     **1 day**
@@ -123,6 +128,7 @@ Development of `Message`
     **1 day**
     
 3. Importer vous contacts
+
     3.1 front-end (mobile and web)
     
      **1 day**
@@ -153,6 +159,7 @@ Development of `profil`
 total time: **1.5 day**
 
 ### 2. Information de base
+
 2.1 front-end for display mode (web and mobile)
 
 **1.5 day**
@@ -172,6 +179,7 @@ total time: **1.5 day**
 total time: **4 days 2 h**
 
 ### 3. Social Media Share
+
 3.1 front-end for display mode (web and mobile)
 
 **0.5 day**
@@ -235,6 +243,7 @@ total time: **3 days 4 h**
     **1 day**
     
 2. Preference d'investissement
+
     2.1 front-end mobile
     
     **1 day**
@@ -247,6 +256,7 @@ total time: **3 days 4 h**
     
     **1 day**
 3. Experience d'investissement
+
     3.1 front-end mobile
     
     **1 day**
