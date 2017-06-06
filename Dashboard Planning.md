@@ -35,20 +35,34 @@ Development of `table de board`
 *Tasks*
 1. Notification  
     1.1 Front-end (mobile and web)
+    
     **1 hours**
+    
     1.2 Back-end
+    
     **\*undefine (hypothesis 2 days)**
+    
 2. Entreprise de la semaine
     2.1 Front-end for web
+    
     **1 day**
+    
     2.2 Front-end for mobile
+    
     **1 day**
+    
     2.3 Back-end
+    
     **2 hours**
+    
 3. Mes projets suivis
+
     3.1 Front-end
+    
     **2 hours**
+    
     3.2 Back-end
+    
     **2 hours**
 
 Total time: **4 days 7 hours = 5 days**
@@ -57,16 +71,25 @@ Total time: **4 days 7 hours = 5 days**
 Development of `portefeuille`
 *Tasks*
 1. Mes investissement
+
     2.1 front-end for web
+    
     **1.5 day**
+    
     2.2 front-end for mobile
+    
     **0.5 day**
+    
     2.2 back-end
+    
     **0.5 h**
 2. Repartition de Mon Portefeuille
     2.1 front-end (d3 js is required)
+    
     **0.5 day**
+    
     2.2 back-end
+    
     **1 h**
 
 Total time: **2.5 days 5.5 hours = 4 days**
@@ -75,8 +98,11 @@ Total time: **2.5 days 5.5 hours = 4 days**
 Development of `Entreprise`
 *Tasks*
 1. Front-end
+
 **1h**
+
 2. Back-end
+
 **1h**
 
 Total time: **0.5 days**
@@ -89,14 +115,20 @@ Development of `Message`
 
 2. Contacts
     2.1 front-end (mobile and web)
+    
     **1 day**
+    
     2.2 back-end 
+    
     **1 day**
     
 3. Importer vous contacts
     3.1 front-end (mobile and web)
+    
      **1 day**
+     
     3.2 back-end
+    
     **\*unknown (hypothesis 3 days)**
 
 Total time: **6 days+**
@@ -105,74 +137,126 @@ Total time: **6 days+**
 Development of `profil`
 *Tasks*
 ### 1. Profil in menu
+
 1.1 front-end for web
+
 **1 day**
+
 1.2 front-end for mobile
+
 **2 h**
+
 1.3 back-end
+
 **2 h**
+
 total time: **1.5 day**
 
 ### 2. Information de base
 2.1 front-end for display mode (web and mobile)
+
 **1.5 day**
+
 2.2 back-end for display mode
+
 **0.5 day**
+
 2.3 front-end for edit mode (web and mobile)
+
 **2 day**
+
 2.4 back-end for edit mode
+
 **2 h**
+
 total time: **4 days 2 h**
 
 ### 3. Social Media Share
 3.1 front-end for display mode (web and mobile)
+
 **0.5 day**
+
 3.2 back-end for display mode
+
 **1 h**
+
 3.3 front-end for edit mode (web and mobile)
+
 **1.5 day**
+
 3.4 back-end for edit mode
+
 **1 h**
+
 total time: **2 days 2 h**
 
 ### 4. Document de justification
 3.1 front-end for display mode (web and mobile)
+
 **1 day**
+
 3.2 back-end for display mode
+
 **2 h**
+
 3.3 front-end for edit mode (web and mobile)
+
 **2 days**
+
 3.4 back-end for edit mode
+
 **2 h**
+
 total time: **3 days 4 h**
 
 ### 5. Completer vos experiences
 #### 5.1 Display mode  
 1. front-end (web and mobile)
+
 **2 h**
+
 2. back-end
+
 **0.5 h**
+
 #### 5.2 Edit mode (one or more new tables are required ) 
 1. Situation Financiere
+
     1.1 front-end mobile
+    
     **2 days**
+    
     1.2 front-end web
+    
     **2 days**
+    
     1.3 back-end 
+    
     **1 day**
+    
 2. Preference d'investissement
     2.1 front-end mobile
+    
     **1 day**
+    
     2.2 front-end web
+    
     **0.5 day**
+    
     2.3 back-end 
+    
     **1 day**
 3. Experience d'investissement
     3.1 front-end mobile
+    
     **1 day**
+    
     3.2 front-end web
+    
     **0.5 day**
+    
     3.3 back-end 
+    
     **1 day**
 total time: **10 days**
 
@@ -182,6 +266,7 @@ Total time: **20.5 days 10.5h = 22 days**
 CSS Detail implementation and optimization
 *Task*
 1. Implementation some special effects of CSS in details for each page
+
 2. 100% responsive for all kinds of screens
 
 Total time: **4 days**
@@ -190,9 +275,13 @@ Total time: **4 days**
 Code optimization and documentation
 *Task*
 1. Optimize the code
+
 **1 day**
+
 2. Write the documentation
+
 **1 day**
+
 Total time: **2 days**
 
 ## Phase 10 
