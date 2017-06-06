@@ -99,11 +99,11 @@ Development of `Entreprise`
 *Tasks*
 1. Front-end
 
-**1h**
+    **1h**
 
 2. Back-end
 
-**1h**
+    **1h**
 
 Total time: **0.5 days**
 
@@ -213,11 +213,11 @@ total time: **3 days 4 h**
 #### 5.1 Display mode  
 1. front-end (web and mobile)
 
-**2 h**
+    **2 h**
 
 2. back-end
 
-**0.5 h**
+    **0.5 h**
 
 #### 5.2 Edit mode (one or more new tables are required ) 
 1. Situation Financiere
