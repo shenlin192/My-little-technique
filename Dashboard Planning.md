@@ -21,8 +21,11 @@ Total time: **4 days**
 Building the infrastructures for Dashboard.   
 *Tasks*
 1. Rewrite the `header` and `footer` into React component 
-    **1 day**
+   
+   **1 day**
+
 2. Implement the functionality of navigation (navigate to `profile`, `table de board`, `portefeuille`, `Entreprise`, `Message`) for Dashboard.
+
     **2 days**  (a day for mobile and a day for web)
 
 Total time: **3 days**
