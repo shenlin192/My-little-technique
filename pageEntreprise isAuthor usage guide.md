@@ -6,6 +6,9 @@ But it will be better that you pay attention to the following points.
 This page is full of editors for different sections. 
 When you click on the `modify` button of a section, a corresponding editor will apprear.
 
+## Permission
+You may need to change the permission mode of the `media/image` directory through terminal so as to upload new images.
+
 ## PhotoVideo editor and documents editor
 When you click on the button `modify`  of `PhotoVideo` and `documents`, 
 all your modifications in the editor are directly saved to the database. 
