@@ -25,7 +25,7 @@ a large amount of rich feature build-in components. The role of `antd` in our `R
 
 The following image shows how Redux manage communication amount different React components.  
 
-<img src="http://i.imgur.com/DUiL9yn.png" width="700">
+<img src="http://i.imgur.com/DUiL9yn.png" width="650">
 
 Whenever information (state) in the store changes, components will be re-rendered automatically. 
 If there is any user action that will make change to state, such action will be firstly dispatched to all the Reducers.
@@ -38,4 +38,5 @@ More info about Antd can be found [here](https://ant.design/docs/react/introduce
 
 
 ### Component Tree
+![](./Images/dashboard/dashboard_architecture_1 .png)
 
