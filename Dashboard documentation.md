@@ -39,4 +39,4 @@ More info about Antd can be found [here](https://ant.design/docs/react/introduce
 
 ### Component Tree
 ![](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png)
-![](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png)
+![](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png)
