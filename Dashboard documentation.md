@@ -91,7 +91,7 @@ a large amount of rich feature build-in components. The role of `antd` in our `R
 ![Component tree of dashboard 2](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png)
 
 ### File sturecture
-
+![File sturecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/oie_sZ5owoJdaMvB.png)
 ## Appendix
 
 This section shows some example code of dashboard project.
