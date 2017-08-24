@@ -79,6 +79,7 @@ From the usage point of view, the role of Antd in “React-Redux” architecture
 ### Summary
 The following figure shows the relationship among React, Redux and Antd. React deals with the view layer, Redux deals with the model layer and Antd provides build-in components to accelerate our development.
 
+![Technology stack summary](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/front-end%20summary%202.png)
 
 ## Dashboard Architecture
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and 
