@@ -34,6 +34,12 @@ Once again, since the store is changed, corresponding components will get update
 
 ### Antd
 
+Antd is a React library that contains a set of high quality components for building rich, interactive user interfaces. It’s an open source project maintained by Alibaba Group.
+
+
+From the usage point of view, the role of Antd in “React-Redux” architecture is somehow similar to the role of Bootstrap in classical “HTML, CSS and JS” technology stack. Because Antd has a very powerful grid system for page layout and provides a large amount of build-in components. Moreover, Antd can better adapt to the development of React application since it aims at React when it was designed.
+
+
 More info about Antd can be found [here](https://ant.design/docs/react/introduce).
 
 
