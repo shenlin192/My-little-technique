@@ -1,6 +1,8 @@
 # Dashboard 
+This documentation aims at presenting the usage, the technology stack and the architecure of dashboard.
 
 ## Usage
+The usage of dashboard includes two parts: local development and server side deployment.
 
 ### development
 
@@ -8,19 +10,52 @@
 2. Install all the dependencies `npm install`
 3. Start the application in localhost `npm start`
 
+If you want to add dependecies to the project, run:
+`npm install package-name -S`
+
+If you want to delete or upgrade (e.g. modify the version) an existing package (dependency), the safest way is to delete the entire `node_modules` folder and then run `npm install` again. 
+
 ### deployment
 
 1. Build for production `npm run build`
 2. Copy and paste the built folder `build` to server under path `\static\dashboard`, and then rename `index.html` to `dashboard.html` 
+3. Add the path of the project after build ('/home/utilisateur/hoolders/static/dashboard/build') to `setting.py`'s `TEMPLATES` 
+
+```
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+               #    'django.contrib.auth.context_processors.auth',
+        'DIRS': [
+            '/home/utilisateur/hoolders/interactive_funding_platform/templates',
+            '/home/utilisateur/hoolders/static/dashboard/build',
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+```
+
+## Technology stack
 
 
-## Architecture
+### Dependencies
+All the dependencies of dashboard is written a `package.json` file. You can find libraries like `Antd`, pugins like `izitoast` and model architecture like `react-redux` in this file. There are more than 30 dependencies used in dashboard.
 
-Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern. View layer is managed by React and the model layer is 
-managed by Redux. Based on this MVVM architecture, a library called Antd is used. It provides a powerful Grid system and 
-a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar as the role of
-`bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
- 
+### React
+React is an open-source JavaScript library created and maintained by Facebook for building user interfaces.  It handles the view layer of web pages and altogether with Redux (see section 4.2.2.2), which handles the models, we can be a MVVM framework. React tries to merge CSS and HTML into JavaScript so a pre-processor called JSX is used. You can organize the code in the level of components with React, which is very helpful for future maintenance and group development. Moreover, the technology of  virtual DOM makes React really fast to re-render a page when the data of a react application is updated.
+
+In short, with React, we can improve development efficiency, make it easier for group development and provide better user experience. 
+
+
 ### React Redux Architecture
 
 The following image shows how Redux manage communication amount different React components.  
@@ -39,10 +74,26 @@ Antd is a React library that contains a set of high quality components for build
 
 From the usage point of view, the role of Antd in “React-Redux” architecture is somehow similar to the role of Bootstrap in classical “HTML, CSS and JS” technology stack. Because Antd has a very powerful grid system for page layout and provides a large amount of build-in components. Moreover, Antd can better adapt to the development of React application since it aims at React when it was designed.
 
-
 More info about Antd can be found [here](https://ant.design/docs/react/introduce).
 
+### Summary
+Figure 4.10 shows the relationship among React, Redux and Antd. React deals with the view layer, Redux deals with the model layer and Antd provides build-in components to accelerate our development.
 
-### Component Tree
+
+
+## Architecture
+
+Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, a library called Antd is used. It provides a powerful Grid system and 
+a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar as the role of
+`bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
+ 
+
+### Component tree of dashboard
+
 ![](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png)
+
 ![](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png)
+
+
+
+
