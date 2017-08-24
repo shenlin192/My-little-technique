@@ -64,20 +64,17 @@ Following figure is the work flow of React-Redux architecture. React deals with 
 
 ![React Redux Architecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/React-redux.png)
 
-Following is a more detailed diagram about this architecture.
+The following image is a more detailed illustion of React-Redux architecture. It seperates the concepte of `container` and `component`. In fact, we can consider `container` as a special `component`, which connects a normal `React component` with the `Redux store`. 
 
 <img src="http://i.imgur.com/DUiL9yn.png" width="650">
 
-
-### Antd
+### [Antd](https://ant.design/docs/react/introduce)
 
 Antd is a React library that contains a set of high quality components for building rich, interactive user interfaces. It’s an open source project maintained by Alibaba Group.
 
 
 From the usage point of view, the role of Antd in “React-Redux” architecture is somehow similar to the role of Bootstrap in classical “HTML, CSS and JS” technology stack. Because Antd has a very powerful grid system for page layout and provides a large amount of build-in components. Moreover, Antd can better adapt to the development of React application since it aims at React when it was designed.
 
-
-More info about Antd can be found [here](https://ant.design/docs/react/introduce).
 
 ### Summary
 The following figure shows the relationship among React, Redux and Antd. React deals with the view layer, Redux deals with the model layer and Antd provides build-in components to accelerate our development.
@@ -87,13 +84,30 @@ The following figure shows the relationship among React, Redux and Antd. React d
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and 
 a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar as the role of `bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
  
-
 ### Component tree of dashboard
 
-![](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png)
+![Component tree of dashboard 1](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png)
 
-![](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png)
+![Component tree of dashboard 2](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png)
+
+### File sturecture
+
+## Appendix
+
+This section shows some example code of dashboard project.
+
+### Store  
 
 
+### Reducer
+
+
+### Action
+
+
+### Compoennt
+
+
+### Container
 
 
