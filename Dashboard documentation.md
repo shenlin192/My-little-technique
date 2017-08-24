@@ -1,5 +1,5 @@
 # Dashboard 
-This documentation aims at presenting the usage, the technology stack and the architecure of dashboard.
+This documentation aims at presenting usage, technology stack and architecure of dashboard.
 
 ## Usage
 The usage of dashboard includes two parts: local development and server side deployment.
@@ -10,10 +10,12 @@ The usage of dashboard includes two parts: local development and server side dep
 2. Install all the dependencies `npm install`
 3. Start the application in localhost `npm start`
 
-If you want to add dependecies to the project, run:
+If you want to add dependecies, run:
 `npm install package-name -S`
 
 If you want to delete or upgrade (e.g. modify the version) an existing package (dependency), the safest way is to delete the entire `node_modules` folder and then run `npm install` again. 
+
+Warning: Do not change the version of any package related to `react-route` unless you know exactly what they are. 
 
 ### deployment
 
@@ -45,16 +47,22 @@ TEMPLATES = [
 ```
 
 ## Technology stack
-
+This section willl explain 
 
 ### Dependencies
 All the dependencies of dashboard is written a `package.json` file. You can find libraries like `Antd`, pugins like `izitoast` and model architecture like `react-redux` in this file. There are more than 30 dependencies used in dashboard.
 
 ### React
-React is an open-source JavaScript library created and maintained by Facebook for building user interfaces.  It handles the view layer of web pages and altogether with Redux (see section 4.2.2.2), which handles the models, we can be a MVVM framework. React tries to merge CSS and HTML into JavaScript so a pre-processor called JSX is used. You can organize the code in the level of components with React, which is very helpful for future maintenance and group development. Moreover, the technology of  virtual DOM makes React really fast to re-render a page when the data of a react application is updated.
+[React](https://facebook.github.io/react/) is an open-source JavaScript library created and maintained by Facebook for building user interfaces.  It handles the view layer of web pages and altogether with Redux, which handles the models, we can be a MVVM framework. React tries to merge CSS and HTML into JavaScript so a pre-processor called JSX is used. You can organize the code in the level of components with React, which is very helpful for future maintenance and group development. Moreover, the technology of  virtual DOM makes React really fast to re-render a page when the data of a react application is updated.
 
 In short, with React, we can improve development efficiency, make it easier for group development and provide better user experience. 
 
+### Redux
+“Redux is a predictable state container for JavaScript apps” as introduced by it’s official [site](http://redux.js.org/). In our project, Redux plays the role of “Model” in the “React-Redux MVVM” architecture. In another word, Redux is used to manage the status of information in a React application, which also means to manage the communication between different components. 
+
+Following figure is the work flow of React-Redux architecture. React deals with the layout of components and user actions (view layer) and Redux deals with the change of information state underneath (model layer). Store is like a database that contains all the information an application needs. Provider is an interface that makes those store data available to all components. Whenever information (state) in the store changes, components will be re-rendered automatically. If there is any user action that will make change to state, such action will be firstly dispatched to all the Reducers. And then, these Reducers will match the action and make changes to the store accordingly. Once again, since the store is changed, corresponding components will get updated automatically.
+
+![React Redux Architecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/React-redux.png)
 
 ### React Redux Architecture
 
@@ -77,7 +85,7 @@ From the usage point of view, the role of Antd in “React-Redux” architecture
 More info about Antd can be found [here](https://ant.design/docs/react/introduce).
 
 ### Summary
-Figure 4.10 shows the relationship among React, Redux and Antd. React deals with the view layer, Redux deals with the model layer and Antd provides build-in components to accelerate our development.
+The following figure shows the relationship among React, Redux and Antd. React deals with the view layer, Redux deals with the model layer and Antd provides build-in components to accelerate our development.
 
 
 
