@@ -155,7 +155,7 @@ The following image is a snapshot of the file structure. A brief explanation wil
 2. Folder `node_modules` contains all node modules including all dependencies written in file `package.json`. This folder is generated automatically when you run `npm install`.
 3. Folder `public` contains the `index.html` file, which is also the only html file of the application.
 4. Folder `src` contains the source code (js/sass).
-    1. Folder `actions` contains 
+    1. Folder `actions` contains all the redux actions
     2. Folder `components` contains all the components mentioned in section "Component tree of dashboard"
     3. Folder `media` 
     4. Folder `reducers` defines reducers for the application. In redux, a reducer to the store is like a table to the database.
@@ -170,7 +170,7 @@ The following image is a snapshot of the file structure. A brief explanation wil
 This section shows some example code, which can be helpful for understanding the `React-Redux` architecture in dashboard.
 
 ### Compoennt
-
+A normail component
 ```javascript
 export default class App extends Component {
     render() {
@@ -187,7 +187,7 @@ export default class App extends Component {
 ```
 
 ### Container
-This is how a container looks like. It's just a component that connected with the Redux store.
+A component connected with the Redux store is a container. In this documentation, the word component is used to indicate both component and container.
 
 ```javascript
 class App extends Component {
