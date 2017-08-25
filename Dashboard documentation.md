@@ -62,7 +62,9 @@ In short, with React, we can improve development efficiency, make it easier for 
 
 The following figure is the work flow of React-Redux architecture. React deals with the layout of components and user actions (view layer) and Redux deals with the change of information state underneath (model layer). A store is like a database that contains all the information an application needs. A provider is an interface that makes those store data available to all components. Whenever information (state) in the store changes, components will be re-rendered automatically. If there is any user action that will make the change to state, such action will be firstly dispatched to all the Reducers. And then, these Reducers will match the action and make changes to the store accordingly. Once again, since the store is changed, corresponding components will get updated automatically.
 
-![React Redux Architecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/React-redux.png)
+<p align="center">
+  <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/React-redux.png"/>
+</p>
 
 The following image is a more detailed illustration of React-Redux architecture. It separates the concept of `container` and `component`. In fact, we can consider `container` as a special `component`, which connects a normal `React component` with the `Redux store`. 
 
