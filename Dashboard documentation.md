@@ -161,68 +161,14 @@ The following image is a snapshot of the file structure. A brief explanation wil
     4. Folder `reducers` defines reducers for the application. In redux, a reducer to the store is like a table to the database.
     5. Folder `translate` contains a french version text and an English version text file
     6. File `index.js` is entrance of the entire application. It mounts the entire application to a specific DOM element in `index.html`.
-    7. File `App.js` is the toppest level component (root component).
-    8. File `store.js` contains all the Redux reducers. It's also database of the application.
+    7. File `App.js` is the toppest level component (root component).
+    8. File `store.js` contains all the Redux reducers. It's also database of the application.
 
 5. `package.json` defines all dependencies and some node scripts of the project.
 
 ## Appendix
 This section shows some example code, which can be helpful for understanding the `React-Redux` architecture in dashboard.
 
-### Store  
-
-```javascript
-import { applyMiddleware, createStore} from 'redux';
-import promise  from 'redux-promise-middleware';
-import logger from 'redux-logger';
-import thunk from 'redux-thunk';
-import allReducers from './reducers/allReducers';
-
-const middleware = applyMiddleware(promise(),thunk, logger);
-
-export default createStore(allReducers, middleware)
-```
-
-### Reducer
-
-```javascript
-export default function reducer(state={
-    slug: null,
-    fetching: false,
-    fetched: false,
-    error: null,
-}, action) {
-
-    switch (action.type) {
-        case "FETCH_EVENT": {
-            return {...state, fetching: true}
-        }
-        case "FETCH_EVENT_REJECTED": {
-            return {...state, fetching: false, error: action.payload}
-        }
-        case "FETCH_EVENT_FULFILLED": {
-            return {
-                ...state,
-                fetching: false,
-                fetched: true,
-                slug: action.payload.slug,
-            }
-        }
-    }
-    return state
-}
-```
-
-### Action
-
-```javascript
-export function checkFirstName(code){
-    return {
-        type: 'SET_FIRST_NAME_VALIDATION_STATUS',
-        payload: code,
-    }
-}
-```
 ### Compoennt
 
 ```javascript
@@ -264,5 +210,71 @@ export default connect((store) => {
     }
 })(App);
 ```
+
+### Action
+
+Actions are payloads of information that send data from your application to your store. They are the only source of information for the store.
+
+```javascript
+export function checkFirstName(code){
+    return {
+        type: 'SET_FIRST_NAME_VALIDATION_STATUS',
+        payload: code,
+    }
+}
+```
+
+### Reducer
+Actions describe the fact that something happened, but don't specify how the application's state changes in response. This is the job of reducers.
+
+```javascript
+export default function reducer(state={
+    slug: null,
+    fetching: false,
+    fetched: false,
+    error: null,
+}, action) {
+
+    switch (action.type) {
+        case "FETCH_EVENT": {
+            return {...state, fetching: true}
+        }
+        case "FETCH_EVENT_REJECTED": {
+            return {...state, fetching: false, error: action.payload}
+        }
+        case "FETCH_EVENT_FULFILLED": {
+            return {
+                ...state,
+                fetching: false,
+                fetched: true,
+                slug: action.payload.slug,
+            }
+        }
+    }
+    return state
+}
+```
+
+
+### Store  
+In the previous sections, we defined the actions that represent the facts about “what happened” and the reducers that update the state according to those actions.
+
+The Store is the object that brings them together. It's important to note that you'll only have a single store in a Redux application. 
+
+```javascript
+import { applyMiddleware, createStore} from 'redux';
+import promise  from 'redux-promise-middleware';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import allReducers from './reducers/allReducers';
+
+const middleware = applyMiddleware(promise(),thunk, logger);
+
+export default createStore(allReducers, middleware)
+```
+
+
+
+
 
 
