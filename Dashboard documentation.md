@@ -153,21 +153,20 @@ Continue with the profile component above.
 1. Folder `build` contains the code for production. This folder is generated automatically when you run `npm run build`.
 2. Folder `node_modules` contains all node modules including all dependencies written in file `package.json`. This folder is generated automatically when you run `npm install`.
 3. Folder `public` contains the `index.html` file, which is also the only html file of the application.
-4. Folder `src` contains 
-    1. Folder `actions`
-    2. Folder `components`
-    3. Folder `media`
-    4. Folder `reducers`
-    5. Folder `translate` contains 
-    
-    6. File `index.js` is entrance of the entire application
+4. Folder `src` contains the source code (js/sass).
+    1. Folder `actions` contains 
+    2. Folder `components` contains 
+    3. Folder `media` 
+    4. Folder `reducers` contains. A reducer for the store is like a table for the database.
+    5. Folder `translate` contains a french version text and an English version text file
+    6. File `index.js` is entrance of the entire application. It mounts to all the JS 
     7. File `App.js` is the root component of the application
     8. File `store.js` contains all the Redux reducers. It's also database of the application.
 
 5. `package.json` defines all dependencies and some node scripts of the project.
 
 ## Appendix
-This section shows some example code of dashboard project.
+This section shows some example code, which can be helpful for understanding the `React-Redux` architecture in dashboard.
 
 ### Store  
 
