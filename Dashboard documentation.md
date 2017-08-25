@@ -68,7 +68,9 @@ The following figure is the work flow of React-Redux architecture. React deals w
 
 The following image is a more detailed illustration of React-Redux architecture. It separates the concept of `container` and `component`. In fact, we can consider `container` as a special `component`, which connects a normal `React component` with the `Redux store`. 
 
-<img src="http://i.imgur.com/DUiL9yn.png" width="650">
+<p align="center">
+   <img src="http://i.imgur.com/DUiL9yn.png" width="650">
+</p>
 
 ### [Antd](https://ant.design/docs/react/introduce)
 
@@ -81,16 +83,25 @@ From the usage point of view, the role of Antd in “React-Redux” architecture
 ### Summary
 The following figure shows the relationship among React, Redux, and Antd. React deals with the view layer, Redux deals with the model layer and Antd provides build-in components to accelerate our development.
 
-![Technology stack summary](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/front-end%20summary%202.png)
+
+<p align="center">
+    <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/front-end%20summary%202.png">
+</p>
 
 ## Dashboard Architecture
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar to the role of `bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
  
 ### Component tree of dashboard
 
-![Component tree of dashboard 1](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png)
 
-![Component tree of dashboard 2](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png)
+<p align="center">
+    <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png">
+</p>
+
+<p align="center">
+    <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png">
+</p>
+
 
 ### File sturecture
 ![File sturecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/oie_sZ5owoJdaMvB.png)
