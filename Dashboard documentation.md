@@ -65,7 +65,7 @@ The following figure is the work flow of React-Redux architecture. React deals w
   <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/React-redux.png"/>
 </p>
 
-The following image is a more detailed illustration of React-Redux architecture. It separates the concept of `container` and `component`. In fact, we can consider `container` as a special `component`, which connects a normal `React component` with the `Redux store`. 
+The following image is a more detailed illustration of React-Redux architecture. It separates the concept of `container` and `component`. In fact, we can consider `container` as a special `component`, which connects a normal `React component` with the `Redux store`. There will be some example code on the `React-Redux` architecture.
 
 <p align="center">
    <img src="http://i.imgur.com/DUiL9yn.png" width="650">
@@ -88,7 +88,7 @@ The following figure shows the relationship among React, Redux, and Antd. React 
 
 
 ### Dependencies
-All the dependencies of dashboard is written in a `package.json` file. Dependency is a huge concept including "libirary", "pre-complier", "plugin", "model", "framework", etc. Following is a list of dependencies uesd by dashboard.  
+All the dependencies of dashboard is written in a `package.json` file. Dependency is a huge concept including "libirary", "pre-complier", "plugin", "model", "framework", etc. Following is a list of dependencies uesd by dashboard. Do not change the versions of dependencies unless you know exactly what you are doing.
 
 ```javascript
 "dependencies": {
@@ -134,18 +134,38 @@ All the dependencies of dashboard is written in a `package.json` file. Dependenc
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar to the role of `bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
  
 ### Component tree of dashboard
+
+
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png">
 </p>
 
-Continue with the profile component above.
+Continue with the profile component above. 
+
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png">
 </p>
 
 
 ### File sturecture
-![File sturecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/oie_sZ5owoJdaMvB.png)
+
+![File sturecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/oie_sZ5owoJdaMvB.png) 
+
+1. Folder `build`
+2. Folder `node_modules`
+3. Folder `public`
+4. Folder `src`
+    4.1 Folder `actions`
+    4.2 Folder `components`
+    4.3 Folder `media`
+    4.4 Folder `reducers`
+    4.5 Folder `translate`
+    4.6 `index.js `
+    4.7 `App.js`
+    4.8 `store.js`
+    
+5. `package.json`
+
 ## Appendix
 This section shows some example code of dashboard project.
 
