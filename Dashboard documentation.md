@@ -65,7 +65,7 @@ The following figure is the work flow of React-Redux architecture. React deals w
   <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/React-redux.png"/>
 </p>
 
-The following image is a more detailed illustration of React-Redux architecture. It separates the concept of `container` and `component`. In fact, we can consider `container` as a special `component`, which connects a normal `React component` with the `Redux store`. There will be some example code on the `React-Redux` architecture.
+The following image is a more detailed illustration of React-Redux architecture. It separates the concept of `container` and `component`. In fact, we can consider `container` as a special `component`, which connects a normal `React component` with the `Redux store`. There will be some example code about `React-Redux` architecture in the Appendix section.
 
 <p align="center">
    <img src="http://i.imgur.com/DUiL9yn.png" width="650">
@@ -159,11 +159,11 @@ Continue with the profile component above.
     2. Folder `components`
     3. Folder `media`
     4. Folder `reducers`
-    5. Folder `translate`
-    6. File `index.js`
-    7. File `App.js`
-    8. File `store.js`
-    
+    5. Folder `translate` contains 
+    6. File `index.js` is entrance of the entire application
+    7. File `App.js` is the root component of the application
+    8. File `store.js` contains all the Redux reducers. It's also the database of the application.
+
 5. `package.json`
 
 ## Appendix
