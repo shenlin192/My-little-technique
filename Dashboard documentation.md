@@ -47,10 +47,9 @@ TEMPLATES = [
 ```
 
 ## Technology stack
-This section will explain the technology stack of the dashboard. The pillar technologies are React, Redux, and Antd, which supports an entire structure of dashboard. Based on these three technologies, more than 30 dependencies are used to build up a dynamic and easy-to-use development environment. 
+This section will explain the technology stack of the dashboard. The pillar technologies are React, Redux, and Antd, which supports an entire structure of dashboard. Based on these three technologies, almost 30 dependencies are used to build up a dynamic and easy-to-use development environment. 
 
-### Dependencies
-All the dependencies of dashboard is written a `package.json` file. You can find libraries like `Antd`, plugins like `izitoast` and model architecture like `react-redux` in this file. There are more than 30 dependencies used in the dashboard.
+
 
 ### [React](https://facebook.github.io/react/)
 React is an open-source JavaScript library created and maintained by Facebook for building user interfaces.  It handles the view layer of web pages and altogether with Redux, which handles the models, we can be an MVVM framework. React tries to merge CSS and HTML into JavaScript so a pre-processor called JSX is used. You can organize the code in the level of components with React, which is very helpful for future maintenance and group development. Moreover, the technology of virtual DOM makes React really fast to re-render a page when the data of a react application is updated.
@@ -80,19 +79,61 @@ Antd is a React library that contains a set of high-quality components for build
 From the usage point of view, the role of Antd in “React-Redux” architecture is somehow similar to the role of Bootstrap in classical “HTML, CSS and JS” technology stack. Because Antd has a very powerful grid system for page layout and provides a large amount of build-in components. Moreover, Antd can better adapt to the development of React application since it aims at React when it was designed.
 
 
-### Summary
+### Pillar technologies
 The following figure shows the relationship among React, Redux, and Antd. React deals with the view layer, Redux deals with the model layer and Antd provides build-in components to accelerate our development.
-
 
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/front-end%20summary%202.png">
 </p>
 
+
+### Dependencies
+All the dependencies of dashboard is written in a `package.json` file. Dependency is a huge concept including "libirary", "pre-complier", "plugin", "model", "framework", etc. Following is a list of dependencies uesd by dashboard.  
+
+```
+"dependencies": {
+    "antd": "^2.11.2",
+    "axios": "^0.16.2",
+    "country-data": "0.0.31",
+    "intl": "^1.2.5",
+    "izitoast": "^1.1.5",
+    "libphonenumber": "0.0.10",
+    "libphonenumber-js": "^0.4.19",
+    "node-less": "^1.0.0",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.5.4",
+    "react-highcharts": "^12.0.0",
+    "react-image-fallback": "^5.0.0",
+    "react-intl": "^2.3.0",
+    "react-intl-universal": "^1.2.1",
+    "react-number-format": "^2.0.0-alpha3",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-bootstrap": "^0.24.2",
+    "react-router-dom": "^4.1.1",
+    "react-slick": "^0.14.11",
+    "react-telephone-input": "^4.0.1",
+    "react-truncate": "^2.1.4",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^2.7.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.7"
+  },
+```
+
+
+
 ## Dashboard Architecture
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar to the role of `bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
  
 ### Component tree of dashboard
-
 
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png">
