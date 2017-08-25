@@ -128,13 +128,11 @@ All the dependencies of dashboard is written in a `package.json` file. Dependenc
   },
 ```
 
-
-
 ## Dashboard Architecture
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar to the role of `bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
  
 ### Component tree of dashboard
-The following iamge illustrates . Each circle corresponds to a component. For example, for the circle "App", you can find a `app.js` file which defines and exports an App component. 
+The following iamge illustrates the component tree of dashboard. Each circle corresponds to a component. For example, for the circle "App", you can find a `app.js` file which defines and exports an App component. The dirctional connector "-->" connects a child component with its parent component. The `router` redirects a user to different components (`profile`, `tableau de board`, `Portefeuille`, etc.) according to the `url`.
 
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png">
@@ -152,20 +150,21 @@ Continue with the profile component above.
 ![File sturecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/oie_sZ5owoJdaMvB.png) 
 
 
-1. Folder `build`
-2. Folder `node_modules`
-3. Folder `public`
-4. Folder `src`
+1. Folder `build` contains the code for production. This folder is generated automatically when you run `npm run build`.
+2. Folder `node_modules` contains all node modules including all dependencies written in file `package.json`. This folder is generated automatically when you run `npm install`.
+3. Folder `public` contains the `index.html` file, which is also the only html file of the application.
+4. Folder `src` contains 
     1. Folder `actions`
     2. Folder `components`
     3. Folder `media`
     4. Folder `reducers`
     5. Folder `translate` contains 
+    
     6. File `index.js` is entrance of the entire application
     7. File `App.js` is the root component of the application
-    8. File `store.js` contains all the Redux reducers. It's also the database of the application.
+    8. File `store.js` contains all the Redux reducers. It's also database of the application.
 
-5. `package.json`
+5. `package.json` defines all dependencies and some node scripts of the project.
 
 ## Appendix
 This section shows some example code of dashboard project.
