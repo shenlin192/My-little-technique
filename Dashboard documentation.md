@@ -134,7 +134,7 @@ All the dependencies of dashboard is written in a `package.json` file. Dependenc
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar to the role of `bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
  
 ### Component tree of dashboard
-
+The following iamge illustrates . Each circle corresponds to a component. For example, for the circle "App", you can find a `app.js` file which defines and exports an App component. 
 
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png">
@@ -150,6 +150,7 @@ Continue with the profile component above.
 ### File sturecture
 
 ![File sturecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/oie_sZ5owoJdaMvB.png) 
+
 
 1. Folder `build`
 2. Folder `node_modules`
@@ -171,16 +172,98 @@ This section shows some example code of dashboard project.
 
 ### Store  
 
+```javascript
+import { applyMiddleware, createStore} from 'redux';
+import promise  from 'redux-promise-middleware';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import allReducers from './reducers/allReducers';
+
+const middleware = applyMiddleware(promise(),thunk, logger);
+
+export default createStore(allReducers, middleware)
+```
 
 ### Reducer
 
+```javascript
+export default function reducer(state={
+    slug: null,
+    fetching: false,
+    fetched: false,
+    error: null,
+}, action) {
+
+    switch (action.type) {
+        case "FETCH_EVENT": {
+            return {...state, fetching: true}
+        }
+        case "FETCH_EVENT_REJECTED": {
+            return {...state, fetching: false, error: action.payload}
+        }
+        case "FETCH_EVENT_FULFILLED": {
+            return {
+                ...state,
+                fetching: false,
+                fetched: true,
+                slug: action.payload.slug,
+            }
+        }
+    }
+    return state
+}
+```
 
 ### Action
 
-
+```javascript
+export function checkFirstName(code){
+    return {
+        type: 'SET_FIRST_NAME_VALIDATION_STATUS',
+        payload: code,
+    }
+}
+```
 ### Compoennt
 
+```javascript
+export default class App extends Component {
+    render() {
+        return (
+        <div>
+            <Header/>
+            <Main/>
+            <Footer/>
+        </div>
+        );
+    }
+}
+
+```
 
 ### Container
+This is how a container looks like. It's just a component that connected with the Redux store.
+
+```javascript
+class App extends Component {
+    render() {
+        return (
+        <div>
+            <Header/>
+            <Main/>
+            <Footer/>
+        </div>
+        );
+    }
+}
+
+
+export default connect((store) => {
+    return {
+        tweets: store.tweets.tweets,
+        routerPath: store.routerPath.routerPath
+    }
+})(App);
+```
 
 
