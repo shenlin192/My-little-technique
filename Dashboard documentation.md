@@ -155,8 +155,7 @@ The following image is a snapshot of the file structure. A brief explanation wil
 2. Folder `node_modules` contains all node modules including all dependencies written in file `package.json`. This folder is generated automatically when you run `npm install`.
 3. Folder `public` contains the `index.html` file, which is also the only html file of the application.
 4. Folder `src` contains the source code (js/sass).
-
-    4.1. Folder `actions` contains all the redux actions
+    4.1. Folder `actions` contains all the redux actions
     4.2. Folder `components` contains all the components mentioned in section "Component tree of dashboard"
     4.3. Folder `media` 
     4.4. Folder `reducers` defines reducers for the application. In redux, a reducer to the store is like a table to the database.
