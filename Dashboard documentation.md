@@ -155,14 +155,14 @@ Continue with the profile component above.
 2. Folder `node_modules`
 3. Folder `public`
 4. Folder `src`
-    4.1 Folder `actions`
-    4.2 Folder `components`
-    4.3 Folder `media`
-    4.4 Folder `reducers`
-    4.5 Folder `translate`
-    4.6 `index.js `
-    4.7 `App.js`
-    4.8 `store.js`
+    1. Folder `actions`
+    2. Folder `components`
+    3. Folder `media`
+    4. Folder `reducers`
+    5. Folder `translate`
+    6. `index.js `
+    7. `App.js`
+    8. `store.js`
     
 5. `package.json`
 
