@@ -23,7 +23,7 @@ Warning: Do not change the version of any package related to `react-route` unles
 2. Copy and paste the built folder `build` to server under path `\static\dashboard`, and then rename `index.html` to `dashboard.html` 
 3. Add the path of the project after build ('/home/utilisateur/hoolders/static/dashboard/build') to `setting.py`'s `TEMPLATES` 
 
-```
+```python
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -90,7 +90,7 @@ The following figure shows the relationship among React, Redux, and Antd. React 
 ### Dependencies
 All the dependencies of dashboard is written in a `package.json` file. Dependency is a huge concept including "libirary", "pre-complier", "plugin", "model", "framework", etc. Following is a list of dependencies uesd by dashboard.  
 
-```
+```javascript
 "dependencies": {
     "antd": "^2.11.2",
     "axios": "^0.16.2",
@@ -134,11 +134,11 @@ All the dependencies of dashboard is written in a `package.json` file. Dependenc
 Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern mentioned above. View layer is managed by React and the model layer is managed by Redux. Based on this MVVM architecture, Antd is used. It provides a powerful Grid system and a large amount of rich feature build-in components. The role of `antd` in our `React-Redux` architecture is somehow similar to the role of `bootstrap` in the classical usage of `HTML, CSS, JS, Jquery`.
  
 ### Component tree of dashboard
-
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_architecture_1%20.png">
 </p>
 
+Continue with the profile component above.
 <p align="center">
     <img src="https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/dashboard_%20architecture_2.png">
 </p>
@@ -147,7 +147,6 @@ Dashboard follows the Model–view–viewmodel (MVVM) architectural pattern ment
 ### File sturecture
 ![File sturecture](https://github.com/shenlin192/myNotes/blob/master/Images/dashboard/oie_sZ5owoJdaMvB.png)
 ## Appendix
-
 This section shows some example code of dashboard project.
 
 ### Store  
