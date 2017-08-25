@@ -160,9 +160,9 @@ Continue with the profile component above.
     3. Folder `media`
     4. Folder `reducers`
     5. Folder `translate`
-    6. `index.js `
-    7. `App.js`
-    8. `store.js`
+    6. File `index.js`
+    7. File `App.js`
+    8. File `store.js`
     
 5. `package.json`
 
