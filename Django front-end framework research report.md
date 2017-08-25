@@ -92,7 +92,7 @@ Let's anaylse this example. This time, we will communicate with the server becau
 ```
 
 #### Conclusion
-With front-end framework, all `HTML` templates are availabe in the client-side but not the server side. All that we need is communication with a server in the form of JSON. Therefore front-end framework can highly reduce the volume of a HTTP response.
+With front-end framework, all `HTML` templates are availabe in the client-side but not the server side. All that we need is communication with a server in the form of JSON. Therefore front-end framework can highly reduce the volume of an HTTP response.
 
 ### Reduce possible bugs
 #### Example
@@ -106,7 +106,7 @@ $('.exampleClass').on('click', () => {
 Whenever we click on an HTML element with a class attribute "exampleClass", the `console.log(123)` will then be executed. Very easy!?
 
 If that's the answer, then you may be not very familiar with jQuery. 
-The code of example 3 will not have any affect to a newly created element with class attribute "exampleClass". There are some solutions but they are out of the target of this article.
+The code of example 3 will not have any effect to a newly created element with class attribute "exampleClass". There are some solutions but they are out of the target of this article.
 
 With front-end templates, there will not be problems like that as we are not dealing with the HTML element directly but the **data** of the website.  Look at example 4, if we want to creat a new `item`, just add the data in the `items`' array. And whenevery we click on the first `<li>` inside an item, the `function` will be execuded.    
 ```
@@ -125,13 +125,13 @@ Front-end framework can help us write stable code and avoid possible bugs.
 #### Example
 ** Case 1 **
 
-Please review example 2. This code snippet is for the propose to create a new question. It's a separated HTML template file that will be rendered and be sent back to the click when a user click on `poser une question`. But in fact, this template alse exists in another HTML file which is used to describe the entire page of pageEntreprise for the first time a client visit our site. Thus, if we want to modify some structure of the layout of `question`, 2 files needed to be changed in our case.
+Please review example 2. This code snippet is for the purpose to create a new question. It's a separated HTML template file that will be rendered and be sent back to the click when a user click on `poser une question`. But in fact, this template alse exists in another HTML file which is used to describe the entire page of pageEntreprise for the first time a client visit our site. Thus, if we want to modify some structure of the layout of `question`, 2 files needed to be changed in our case.
 
 With front-end frameworks, we use only one template as mentioned in the section "Reduce the volume of response". So only one file needs to be changed.
 
 ** Case 2 **
 
-Image we have the HTML code sturcture as example 5. With Django, if we want to change the  `variable` in JavaScript, 3 jQuery causes are needed in order to find these 3 dispersed elements.
+Imagine we have the HTML code sturcture as example 5. With Django, if we want to change the  `variable` in JavaScript, 3 jQuery causes are needed in order to find these 3 dispersed elements.
 
 However, with front-end framework, the `variable` is a JavaScript variable rather than a Django varibale. So that we can modify it directly with a cause like `variable=newValue`.
 ```
@@ -158,18 +158,18 @@ If the variable is repeated 100 times everywhere in the page, then we will need 
 
 ** Case 3 **
 
-Front-end framewokrs stucture the code in different components as shown in the figure below. We can define our JavaScript and StyleSheet in different granularities( global level, root component level, sub component level ... ). And we will need centralize of less no more. Beacuse the framework has provided you the ability to centralize everything (html, Js, Css...) in all granularities.
+Front-end frameworks structure the code in different components as shown in the figure below. We can define our JavaScript and StyleSheet in different granularities( global level, root component level, sub component level ... ). And we will not need to centralize `less` anymore. Because the framework has provided you the ability to centralize everything (html, Js, Css...) in all granularities.
 
 ![Alt](https://camo.githubusercontent.com/14e5f4477f49cf0fc0d8f228facb17772a0b1025/687474703a2f2f626c6f672e6576616e796f752e6d652f696d616765732f7675652d636f6d706f6e656e742e706e67)
 
 #### Conclusion
-Front-end framewokrs can largely reduce code reduduncy and improve code maintainability.
+Front-end frameworks can largely reduce code redundancy and improve code maintainability.
 
 
 ### Separation of the front-end and back-end
-Separation of the front-end and back-end is **not** the tradictionaly way django does. 
-A real separation is: the server (web service provider) provides only APIs and the client (web service comsummer) can be a browser, an mobile application, other servers, or even a coffee machine, a car, etc. Whatever techniques the client use will **not** have **any** affect on the server.
+Separation of the front-end and back-end is **not** the tradictional way django does. 
+A real separation is: the server (web service provider) provides only APIs and the client (web service consumer) can be a browser, a mobile application, other servers, or even a coffee machine, a car, etc. Whatever techniques the client uses will **not** have **any** effect on the server.
 
 This book may help you understand more.
-[Api for dummies] ftp://public.dhe.ibm.com/software/uk/pdf/api-service/WSM14025USEN.pdf ( May at least finish reading the table of centent)
+[Api for dummies] ftp://public.dhe.ibm.com/software/uk/pdf/api-service/WSM14025USEN.pdf ( May at least finish reading the table of content)
 
